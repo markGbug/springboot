@@ -1,17 +1,42 @@
 group 'markGbug'
 version '1.0-SNAPSHOT'
 
-apply plugin: 'java'
-apply plugin: 'war'
+buildscript {
+    repositories {
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
+    }
 
-sourceCompatibility = 1.5
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.9.RELEASE")
+    }
+}
+bootRun {
+    //开启页面热加载功能
+    addResources = true
+}
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
     mavenCentral()
 }
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-parent:1.5.6.RELEASE");
-    compile("org.springframework.boot:spring-boot-starter-web:1.5.6.RELEASE");
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile("org.springframework.boot:spring-boot-starter-parent:1.5.6.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-web:1.5.6.RELEASE")
+    /*FreeMaker*/
+    compile("org.springframework.boot:spring-boot-starter-freemarker:1.5.6.RELEASE")
+    compile("org.apache.commons:commons-lang3:3.7")
+    /*持久层*/
+    compile("mysql:mysql-connector-java:6.0.6")
+    compile("org.springframework.boot:spring-boot-devtools:1.5.6.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa:1.5.6.RELEASE")
+    testCompile("org.springframework.boot:spring-boot-starter-test:1.5.6.RELEASE")
+    compileOnly("javax.servlet:javax.servlet-api:4.0.0")
 }
+
