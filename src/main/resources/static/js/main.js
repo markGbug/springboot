@@ -1,17 +1,8 @@
-﻿/*
-
-@Name：不落阁后台模板源码 
-@Author：Absolutely 
-@Site：http://www.lyblogs.cn
-
-*/
-
-layui.define(['element', 'layer', 'util', 'pagesize', 'form'], function (exports) {
+﻿layui.define(['element', 'layer', 'util', 'form'], function (exports) {
     var $ = layui.jquery;
-    var element = layui.element();
+    var element = layui.element;
     var layer = layui.layer;
-    var util = layui.util;
-    var form = layui.form();
+    var form = layui.form;
     //form.render();
     //快捷菜单开关
     $('span.sys-title').click(function (e) {
@@ -59,7 +50,11 @@ layui.define(['element', 'layer', 'util', 'pagesize', 'form'], function (exports
             setTimeout(function () {
                 //模拟菜单加载
                 layer.close(index);
-                element.tabAdd('tab', { title: title, content: '<iframe src="' + url + '" style="width:100%;height:100%;border:none;outline:none;"></iframe>', id: id });
+                element.tabAdd('tab', {
+                    title: title,
+                    content: '<iframe src="' + url + '" style="width:100%;height:100%;border:none;outline:none;"></iframe>',
+                    id: id
+                });
                 //切换到指定索引的卡片
                 element.tabChange('tab', id);
             }, 500);
@@ -86,7 +81,11 @@ layui.define(['element', 'layer', 'util', 'pagesize', 'form'], function (exports
             setTimeout(function () {
                 //模拟菜单加载
                 layer.close(index);
-                element.tabAdd('tab', { title: title, content: '<iframe src="' + url + '" style="width:100%;height:100%;border:none;outline:none;"></iframe>', id: id });
+                element.tabAdd('tab', {
+                    title: title,
+                    content: '<iframe src="' + url + '" style="width:100%;height:100%;border:none;outline:none;"></iframe>',
+                    id: id
+                });
                 //切换到指定索引的卡片
                 element.tabChange('tab', id);
             }, 500);
@@ -128,14 +127,15 @@ layui.define(['element', 'layer', 'util', 'pagesize', 'form'], function (exports
     });
 
     var ishide = false;
+
     //隐藏侧边导航
     function hideSideNav() {
         if (!ishide) {
-            $('.layui-side').animate({ left: '-200px' });
-            $('.layui-side-hide').animate({ left: '-200px' });
-            $('.layui-body').animate({ left: '0px' });
-            $('.layui-footer').animate({ left: '0px' });
-            var tishi = layer.msg('鼠标靠左自动显示菜单', { time: 1500 });
+            $('.layui-side').animate({left: '-200px'});
+            $('.layui-side-hide').animate({left: '-200px'});
+            $('.layui-body').animate({left: '0px'});
+            $('.layui-footer').animate({left: '0px'});
+            var tishi = layer.msg('鼠标靠左自动显示菜单', {time: 1500});
             layer.style(tishi, {
                 top: 'auto',
                 bottom: '50px'
@@ -143,19 +143,21 @@ layui.define(['element', 'layer', 'util', 'pagesize', 'form'], function (exports
             ishide = true;
         }
     }
+
     //显示侧边导航
     function showSideNav() {
         if (ishide) {
-            $('.layui-side').animate({ left: '0px' });
-            $('.layui-side-hide').animate({ left: '0px' });
-            $('.layui-body').animate({ left: '200px' });
-            $('.layui-footer').animate({ left: '200px' });
+            $('.layui-side').animate({left: '0px'});
+            $('.layui-side-hide').animate({left: '0px'});
+            $('.layui-body').animate({left: '200px'});
+            $('.layui-footer').animate({left: '200px'});
             ishide = false;
         }
     }
 
 
     runSteward();
+
     //管家功能
     function runSteward() {
         var layerSteward;   //管家窗口

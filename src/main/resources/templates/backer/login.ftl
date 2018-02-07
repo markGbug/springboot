@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>SBWW MANAGER</title>
-    <link rel="shortcut icon" href="../images/Logo_40.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/static/img/Logo_40.png" type="image/x-icon">
     <!-- layui.css -->
-    <link href="../../static/plugins/layui/css/layui.css" rel="stylesheet" />
+    <link href="/static/plugins/layui/css/layui.css" rel="stylesheet"/>
     <!-- 本页样式 -->
-    <link href="../../static/css/login.css" rel="stylesheet" />
+    <link href="/static/css/login.css" rel="stylesheet"/>
 </head>
 <body>
 <div class="mask"></div>
@@ -20,7 +19,7 @@
     </div>
 </div>
 <!-- layui.js -->
-<script src="../../static/plugins/layui/layui.js"></script>
-<script type="text/javascript" src="../../static/js/login.js"></script>
+<script src="/static/plugins/layui/layui.js"></script>
+<script type="text/javascript" src="/static/js/login.js"></script>
 </body>
 </html>

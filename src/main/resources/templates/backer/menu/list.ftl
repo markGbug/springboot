@@ -3,9 +3,9 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>数据列表页面</title>
+    <title>菜单管理</title>
     <!-- layui.css -->
-    <link href="../plugin/layui/css/layui.css" rel="stylesheet" />
+    <link href="/static/plugins/layui/css/layui.css" rel="stylesheet" />
     <style>
         .layui-btn-small {
             padding: 0 15px;
@@ -59,21 +59,12 @@
 </head>
 <body>
 <fieldset id="dataConsole" class="layui-elem-field layui-field-title"  style="display:none;">
-    <legend>控制台</legend>
+    <legend>搜索台</legend>
     <div class="layui-field-box">
         <div id="articleIndexTop">
             <form class="layui-form layui-form-pane" action="">
                 <div class="layui-form-item" style="margin:0;margin-top:15px;">
                     <div class="layui-inline">
-                        <label class="layui-form-label">分类</label>
-                        <div class="layui-input-inline">
-                            <select name="city">
-                                <option value="0"></option>
-                                <option value="1">类别1</option>
-                                <option value="2">类别2</option>
-                                <option value="3">类别3</option>
-                            </select>
-                        </div>
                         <label class="layui-form-label">关键词</label>
                         <div class="layui-input-inline">
                             <input type="text" name="keywords" autocomplete="off" class="layui-input">
@@ -84,7 +75,7 @@
                     </div>
                     <div class="layui-inline">
                         <div class="layui-input-inline" style="width:auto">
-                            <a id="addArticle" class="layui-btn layui-btn-normal">发表文章</a>
+                            <a id="addArticle" class="layui-btn layui-btn-normal">新建菜单</a>
                         </div>
                     </div>
                 </div>
@@ -93,37 +84,38 @@
     </div>
 </fieldset>
 <fieldset id="dataList" class="layui-elem-field layui-field-title sys-list-field" style="display:none;">
-    <legend style="text-align:center;">文章列表</legend>
+    <legend style="text-align:center;">菜单列表</legend>
     <div class="layui-field-box">
         <div id="dataContent" class="">
             <!--内容区域 ajax获取-->
-            <table style="" class="layui-table" lay-even="">
+            <table class="layui-table" lay-even="">
                 <colgroup>
-                    <col width="180">
-                    <col>
-                    <col width="150">
-                    <col width="180">
-                    <col width="90">
-                    <col width="90">
-                    <col width="50">
-                    <col width="50">
+                    <col width="8%">
+                    <col width="12%">
+                    <col width="20%">
+                    <col width="12%">
+                    <col width="12%">
+                    <col width="12%">
+                    <col width="24%">
                 </colgroup>
                 <thead>
                 <tr>
-                    <th>发表时间</th>
-                    <th>标题</th>
-                    <th>作者</th>
+                    <th>序号</th>
+                    <th>菜单</th>
+                    <th>连接</th>
+                    <th>操作员</th>
                     <th>类别</th>
-                    <th colspan="2">选项</th>
-                    <th colspan="2">操作</th>
+                    <th>选项</th>
+                    <th colspan="3">操作</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td>2017-03-22 23:07</td>
-                    <td>不落阁后台模板源码分享</td>
-                    <td>Absolutely</td>
-                    <td>Web前端</td>
+                    <td>10</td>
+                    <td>用户管理</td>
+                    <td>/backer/menu/list</td>
+                    <td>markGbug</td>
+                    <td>一级节点</td>
                     <td>
                         <form class="layui-form" action="">
                             <div class="layui-form-item" style="margin:0;">
@@ -132,14 +124,10 @@
                         </form>
                     </td>
                     <td>
-                        <form class="layui-form" action="">
-                            <div class="layui-form-item" style="margin:0;">
-                                <input type="checkbox" name="top" title="推荐" lay-filter="recommend" checked>
-                            </div>
-                        </form>
+                        <button class="layui-btn layui-btn-small layui-btn-normal"><i class="layui-icon">&#xe642;</i></button>
                     </td>
                     <td>
-                        <button class="layui-btn layui-btn-small layui-btn-normal"><i class="layui-icon">&#xe642;</i></button>
+                        <button class="layui-btn layui-btn-small layui-btn-warm"><i class="layui-icon">&#xe60a;</i></button>
                     </td>
                     <td>
                         <button class="layui-btn layui-btn-small layui-btn-danger"><i class="layui-icon">&#xe640;</i></button>
@@ -151,13 +139,19 @@
         </div>
     </div>
 </fieldset>
+
 <!-- layui.js -->
-<script src="../plugin/layui/layui.js"></script>
+<script src="/static/plugins/layui/layui.js"></script>
 <!-- layui规范化用法 -->
 <script type="text/javascript">
     layui.config({
-        base: '../js/'
-    }).use('datalist');
+        base:'/static/js/'
+    }).extend({
+        datalist:'datalist',
+        pagesize:'pagesize',
+    });
+    layui.use(['datalist'],function () {
+    })
 </script>
 </body>
 </html>

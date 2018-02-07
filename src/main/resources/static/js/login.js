@@ -41,13 +41,10 @@ layui.define(['element', 'layer', 'form'], function (exports) {
         $.ajax({
             type: 'post',
             url: '/backer/login',
-            dataType:'json',
-            data: function(data){
-                var q = {
-                   loginId : data.field.loginId,
-                    password:data.field.password
-                };
-                return q;
+            dataType: 'json',
+            data: {
+                loginId : data.field.loginId,
+                password : data.field.password
             },
             success: function (res) {
                 if (res.ifSuccess) {
@@ -70,8 +67,7 @@ layui.define(['element', 'layer', 'form'], function (exports) {
     });
 
     function login() {
-        var loginHtml = ''; //静态页面只能拼接，这里可以用iFrame或者Ajax请求分部视图。html文件夹下有login.html
-
+        var loginHtml = '';
         loginHtml += '<form class="layui-form">';
         loginHtml += '<div class="layui-form-item">';
         loginHtml += '<label class="layui-form-label">账号</label>';

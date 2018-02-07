@@ -1,7 +1,7 @@
 ﻿<#include "/widgets/blog/head.ftl">
 <!-- 本页样式表 -->
-<link href="../../static/css/about.css" rel="stylesheet" />
-<script src="../../static/js/about.js"></script>
+<link href="/static/css/about.css" rel="stylesheet" />
+<script src="/static/js/about.js"></script>
 <#include "/widgets/blog/menu.ftl">
     <!-- 主体（一般只改变这里的内容） -->
     <div class="blog-body">

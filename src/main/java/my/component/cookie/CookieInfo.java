@@ -1,5 +1,6 @@
 package my.component.cookie;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
@@ -11,11 +12,36 @@ import org.springframework.stereotype.Component;
  * @date 2018/1/28
  */
 @Component
-@PropertySource(value = "classpath:/config/cookies.properties",ignoreResourceNotFound = true)
+@ConfigurationProperties(prefix = "cookieInfo")
+@PropertySource(value = "classpath:/config/cookie.properties")
 public class CookieInfo {
-    public static String loginId;
+    private String loginId;
 
-    public static String name;
+    private String name;
 
-    public static String level;
+    private String level;
+
+    public String getLoginId() {
+        return loginId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLoginId(String loginId) {
+        this.loginId = loginId;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
+    }
 }

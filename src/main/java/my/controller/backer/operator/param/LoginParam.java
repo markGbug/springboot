@@ -1,5 +1,6 @@
 package my.controller.backer.operator.param;
 
+import my.common.ValidMsgConstants;
 import org.hibernate.validator.constraints.NotBlank;
 
 /**
@@ -11,10 +12,10 @@ import org.hibernate.validator.constraints.NotBlank;
  */
 public class LoginParam {
 
-    @NotBlank
+    @NotBlank(message = ValidMsgConstants.LOGIN_ID_NOT_NULL)
     private String loginId;
 
-    @NotBlank
+    @NotBlank(message = ValidMsgConstants.PASSWORD_NOT_NULL)
     private String password;
 
     public String getLoginId() {

@@ -5,6 +5,8 @@ import my.controller.backer.operator.param.OperatorParam;
 import my.dataobject.OperatorDO;
 import org.springframework.data.domain.Page;
 
+import java.util.List;
+
 /**
  * @author zhangbj
  * @version 1.0
@@ -27,4 +29,10 @@ public interface OperatorService {
      * @return
      */
     BaseJson<Page<OperatorDO>> list(OperatorParam param);
+
+    /**
+     * 所有管理员(不直接对外提供)
+     * @return
+     */
+    List<OperatorDO> findAll();
 }

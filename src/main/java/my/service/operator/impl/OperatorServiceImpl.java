@@ -12,6 +12,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author zhangbj
@@ -44,5 +45,10 @@ public class OperatorServiceImpl implements OperatorService{
         Page<OperatorDO> page = operatorRepository.findByOperatorLike(param.getOperator() ,new PageRequest(param.getPageNo(),param.getPageSize()));
         baseJson.setSuccessResult("查询成功",page);
         return baseJson;
+    }
+
+    @Override
+    public List<OperatorDO> findAll() {
+        return operatorRepository.findAll();
     }
 }

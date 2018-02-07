@@ -31,9 +31,13 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:1.5.6.RELEASE")
     /*FreeMaker*/
     compile("org.springframework.boot:spring-boot-starter-freemarker:1.5.6.RELEASE")
+    /*字符处理工具包*/
     compile("org.apache.commons:commons-lang3:3.7")
     /*持久层*/
     compile("mysql:mysql-connector-java:6.0.6")
+
+    compile("org.springframework.boot:spring-boot-configuration-processor:1.5.6.RELEASE")
+    /*SPRING BOOT 开发工具 用于热部署*/
     compile("org.springframework.boot:spring-boot-devtools:1.5.6.RELEASE")
     compile("org.springframework.boot:spring-boot-starter-data-jpa:1.5.6.RELEASE")
     testCompile("org.springframework.boot:spring-boot-starter-test:1.5.6.RELEASE")
