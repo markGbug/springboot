@@ -2,6 +2,7 @@ package my.dataobject;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -16,6 +17,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "t_menu")
+@EntityListeners(AuditingEntityListener.class)
 public class MenuDO {
 
     @Id
@@ -25,31 +27,31 @@ public class MenuDO {
     /**
      * 菜单名称
      */
-    @Column(nullable = false,columnDefinition = "VARCHAR(16) COMMENT '菜单名称'")
+    @Column(nullable = false,columnDefinition = "VARCHAR(40) COMMENT '菜单名称'")
     private String menuName;
 
     /**
      * 父节点ID
      */
-    @Column(columnDefinition = "VARCHAR(16) COMMENT '父节点ID'")
+    @Column(columnDefinition = "VARCHAR(40) COMMENT '父节点ID'")
     private Long parentId;
 
     /**
      * 菜单链接
      */
-    @Column(nullable = false,columnDefinition = "VARCHAR(16) COMMENT '菜单链接'")
+    @Column(nullable = false,columnDefinition = "VARCHAR(40) COMMENT '菜单链接'")
     private String menuUrl;
 
     /**
      * 操作员
      */
-    @Column(nullable = false,columnDefinition = "VARCHAR(16) COMMENT '操作员'")
+    @Column(nullable = false,columnDefinition = "VARCHAR(40) COMMENT '操作员'")
     private String operator;
 
     /**
      * 等级
      */
-    @Column(nullable = false,columnDefinition = "VARCHAR(16) COMMENT '等级'")
+    @Column(nullable = false,columnDefinition = "TINYINT(2) COMMENT '等级'")
     private Integer level;
 
     /**

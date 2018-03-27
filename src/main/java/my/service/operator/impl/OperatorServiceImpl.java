@@ -2,6 +2,7 @@ package my.service.operator.impl;
 
 import my.common.BaseConstants;
 import my.common.BaseJson;
+import my.component.init.InitComponent;
 import my.controller.backer.operator.param.OperatorParam;
 import my.dataobject.OperatorDO;
 import my.repository.OperatorRepository;
@@ -27,6 +28,9 @@ public class OperatorServiceImpl implements OperatorService{
     @Resource
     private OperatorRepository operatorRepository;
 
+    @Resource
+    private InitComponent initComponent;
+
     @Override
     public BaseJson<OperatorDO> backerLogin(String loginId, String password) {
         BaseJson<OperatorDO> baseJson = new BaseJson<>();
@@ -50,5 +54,39 @@ public class OperatorServiceImpl implements OperatorService{
     @Override
     public List<OperatorDO> findAll() {
         return operatorRepository.findAll();
+    }
+
+    @Override
+    public BaseJson<OperatorDO> saveOrUpdate(OperatorDO operatorDO) {
+        BaseJson<OperatorDO> baseJson = new BaseJson<>();
+        OperatorDO result = operatorRepository.save(operatorDO);
+        if (null == result){
+            baseJson.setFailResult(BaseConstants.RespCode.ERROR,"操作失败");
+            return  baseJson;
+        }
+        baseJson.setSuccessResult("操作成功",result);
+        initComponent.operatorFlush();
+        return baseJson;
+    }
+
+    @Override
+    public BaseJson deleteById(Long id) {
+        BaseJson baseJson = new BaseJson();
+        operatorRepository.delete(id);
+        initComponent.operatorFlush();
+        baseJson.setSuccessResult("删除成功",null);
+        return baseJson;
+    }
+
+    @Override
+    public BaseJson<OperatorDO> detail(Long id) {
+        BaseJson<OperatorDO> baseJson = new BaseJson<>();
+        OperatorDO operatorDO = operatorRepository.findOne(id);
+        if (null == operatorDO){
+            baseJson.setFailResult(BaseConstants.RespCode.ERROR,"查询失败");
+            return baseJson;
+        }
+        baseJson.setSuccessResult("查询成功",operatorDO);
+        return baseJson;
     }
 }

@@ -4,6 +4,7 @@ import my.common.BaseConstants;
 import my.common.BaseJson;
 import my.dataobject.UserDO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -33,7 +34,7 @@ public class UserController {
         UserDO userDO = userRepository.findByLoginIdAndPassword(loginId, MD5Utils.encrypt(password));
         return "";
     }
-
+    @Transactional
     @RequestMapping(value = "saveOrUpdate",method = RequestMethod.POST)
     public Object saveOrUpdate(@Valid UserDO userDO, BindingResult result){
         BaseJson<UserDO> baseJson = new BaseJson<>();

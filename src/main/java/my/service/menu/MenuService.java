@@ -48,4 +48,5 @@ public interface MenuService {
      * @return
      */
     List<MenuDO> findAll();
+
 }

@@ -49,9 +49,10 @@ public class MenuServiceImpl implements MenuService {
                 if (null != param.getParentId()) {
                     list.add(cb.equal(root.get("parentId").as(Long.class), param.getParentId()));
                 }
-                return cb.and((Predicate[]) list.toArray());
+                Predicate[] predicates = new Predicate[list.size()];
+                return cb.and(list.toArray(predicates));
             }
-        }, new PageRequest(param.getPageNo(),param.getPageSize()));
+        }, new PageRequest(param.getPageNo()-1,param.getPageSize()));
         baseJson.setSuccessResult("查询成功",list);
         return baseJson;
     }

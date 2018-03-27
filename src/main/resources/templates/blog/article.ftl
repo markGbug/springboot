@@ -16,11 +16,11 @@
                     </div>
                     <div class="article shadow">
                         <div class="article-left">
-                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pagesize.js）！" />
+                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pages.js）！" />
                         </div>
                         <div class="article-right">
                             <div class="article-title">
-                                <a href="detail.ftl">基于laypage的layui扩展模块（pagesize.js）！</a>
+                                <a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a>
                             </div>
                             <div class="article-abstract">
                                 该模块主要是针对当前版本laypage没有页容量控制功能而制作，使用该模块后即可实现每页显示多少条数据的控制！本人原创，但是可能有可能只对本人的分页写法有用！
@@ -37,11 +37,11 @@
                     </div>
                     <div class="article shadow">
                         <div class="article-left">
-                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pagesize.js）！" />
+                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pages.js）！" />
                         </div>
                         <div class="article-right">
                             <div class="article-title">
-                                <a href="detail.ftl">基于laypage的layui扩展模块（pagesize.js）！</a>
+                                <a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a>
                             </div>
                             <div class="article-abstract">
                                 该模块主要是针对当前版本laypage没有页容量控制功能而制作，使用该模块后即可实现每页显示多少条数据的控制！本人原创，但是可能有可能只对本人的分页写法有用！
@@ -58,11 +58,11 @@
                     </div>
                     <div class="article shadow">
                         <div class="article-left">
-                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pagesize.js）！" />
+                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pages.js）！" />
                         </div>
                         <div class="article-right">
                             <div class="article-title">
-                                <a href="detail.ftl">基于laypage的layui扩展模块（pagesize.js）！</a>
+                                <a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a>
                             </div>
                             <div class="article-abstract">
                                 该模块主要是针对当前版本laypage没有页容量控制功能而制作，使用该模块后即可实现每页显示多少条数据的控制！本人原创，但是可能有可能只对本人的分页写法有用！
@@ -79,11 +79,11 @@
                     </div>
                     <div class="article shadow">
                         <div class="article-left">
-                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pagesize.js）！" />
+                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pages.js）！" />
                         </div>
                         <div class="article-right">
                             <div class="article-title">
-                                <a href="detail.ftl">基于laypage的layui扩展模块（pagesize.js）！</a>
+                                <a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a>
                             </div>
                             <div class="article-abstract">
                                 该模块主要是针对当前版本laypage没有页容量控制功能而制作，使用该模块后即可实现每页显示多少条数据的控制！本人原创，但是可能有可能只对本人的分页写法有用！
@@ -100,11 +100,11 @@
                     </div>
                     <div class="article shadow">
                         <div class="article-left">
-                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pagesize.js）！" />
+                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pages.js）！" />
                         </div>
                         <div class="article-right">
                             <div class="article-title">
-                                <a href="detail.ftl">基于laypage的layui扩展模块（pagesize.js）！</a>
+                                <a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a>
                             </div>
                             <div class="article-abstract">
                                 该模块主要是针对当前版本laypage没有页容量控制功能而制作，使用该模块后即可实现每页显示多少条数据的控制！本人原创，但是可能有可能只对本人的分页写法有用！
@@ -121,11 +121,11 @@
                     </div>
                     <div class="article shadow">
                         <div class="article-left">
-                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pagesize.js）！" />
+                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pages.js）！" />
                         </div>
                         <div class="article-right">
                             <div class="article-title">
-                                <a href="detail.ftl">基于laypage的layui扩展模块（pagesize.js）！</a>
+                                <a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a>
                             </div>
                             <div class="article-abstract">
                                 该模块主要是针对当前版本laypage没有页容量控制功能而制作，使用该模块后即可实现每页显示多少条数据的控制！本人原创，但是可能有可能只对本人的分页写法有用！
@@ -176,7 +176,7 @@
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">写了个Win10风格快捷菜单！</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">ASP.NET MVC自定义错误页</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">ASP.NET MVC制作404跳转（非302和200）</a></li>
-                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pagesize.js）！</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a></li>
                         </ul>
                     </div>
                     <div class="blog-module shadow">
@@ -186,7 +186,7 @@
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">ASP.NET MVC制作404跳转（非302和200）</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">ASP.NET MVC 防范跨站请求伪造（CSRF）</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">一步步制作时光轴（三）（JS篇）</a></li>
-                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pagesize.js）！</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">一步步制作时光轴（二）（CSS篇）</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">写了个Win10风格快捷菜单！</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">常用正则表达式</a></li>

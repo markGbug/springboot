@@ -1,10 +1,12 @@
 package my.dataobject;
 
+import my.common.ValidMsgConstants;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 /**
@@ -30,20 +32,21 @@ public class OperatorDO {
      * 操作员
      */
     @Column(nullable = false, columnDefinition = "VARCHAR(40) COMMENT '操作员'")
+    @NotBlank(message = ValidMsgConstants.OPERATOR_NOT_NULL)
     private String operator;
 
     /**
      * 登录ID
      */
     @Column(nullable = false, unique = true, columnDefinition = "VARCHAR(40) COMMENT '登录ID'")
-    @NotBlank(message = "登录名不能为空")
+    @NotBlank(message = ValidMsgConstants.LOGIN_ID_NOT_NULL)
     private String loginId;
 
     /**
      * 密码
      */
     @Column(nullable = false, columnDefinition = "VARCHAR(100) COMMENT '密码'")
-    @NotBlank(message = "密码不能为空")
+    @NotBlank(message = ValidMsgConstants.PASSWORD_NOT_NULL)
     private String password;
 
     /**
@@ -74,6 +77,7 @@ public class OperatorDO {
      * 权限级别
      */
     @Column(columnDefinition = "TINYINT(2) COMMENT '权限级别'")
+    @NotNull(message = ValidMsgConstants.AUTH_NOT_NULL)
     private Integer level;
 
     /**

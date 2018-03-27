@@ -16,7 +16,7 @@
                     <!-- 文章内容（使用Kingeditor富文本编辑器发表的） -->
                     <div class="article-detail shadow">
                         <div class="article-detail-title">
-                            基于laypage的layui扩展模块（pagesize.js）！
+                            基于laypage的layui扩展模块（pages.js）！
                         </div>
                         <div class="article-detail-info">
                             <span>编辑时间：2017/3/18 17:30:22</span>
@@ -172,9 +172,9 @@ pagesize(laypageId, pageSize).callback(function (newPageSize) {
                     <div class="blog-module shadow">
                         <div class="blog-module-title">相似文章</div>
                         <ul class="fa-ul blog-module-ul">
-                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pagesize.js）！</a></li>
-                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pagesize.js）！</a></li>
-                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pagesize.js）！</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a></li>
                         </ul>
                     </div>
                     <div class="blog-module shadow">
@@ -184,7 +184,7 @@ pagesize(laypageId, pageSize).callback(function (newPageSize) {
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">ASP.NET MVC制作404跳转（非302和200）</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">ASP.NET MVC 防范跨站请求伪造（CSRF）</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">一步步制作时光轴（三）（JS篇）</a></li>
-                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pagesize.js）！</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">一步步制作时光轴（二）（CSS篇）</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">写了个Win10风格快捷菜单！</a></li>
                         </ul>

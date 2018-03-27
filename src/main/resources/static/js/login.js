@@ -26,11 +26,11 @@ layui.define(['element', 'layer', 'form'], function (exports) {
                 return "账号只能为英文或数字";
             }
         },
-        result_response: function (value) {
+       /* result_response: function (value) {
             if (value.length < 1) {
                 return '请点击人机识别验证';
             }
-        },
+        },*/
     });
     //监听登陆提交
     form.on('submit(login)', function (data) {

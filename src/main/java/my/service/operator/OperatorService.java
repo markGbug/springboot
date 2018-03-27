@@ -35,4 +35,25 @@ public interface OperatorService {
      * @return
      */
     List<OperatorDO> findAll();
+
+    /**
+     * 操作管理员
+     * @param operatorDO
+     * @return
+     */
+    BaseJson<OperatorDO> saveOrUpdate(OperatorDO operatorDO);
+
+    /**
+     * 删除
+     * @param id
+     */
+    BaseJson deleteById(Long id);
+
+    /**
+     * 详情
+     * @param id
+     * @return
+     */
+    BaseJson<OperatorDO> detail(Long id);
+
 }

@@ -12,10 +12,7 @@ import my.utils.security.SDCUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
@@ -63,8 +60,27 @@ public class BackerLoginController {
         return baseJson;
     }
 
+    @PostMapping("/saveOrUpdate")
+    @ResponseBody
+    public Object saveOrUpdate(@Valid OperatorDO operatorDO,BindingResult result){
+        return  operatorService.saveOrUpdate(operatorDO);
+    }
 
-    /************************* 跳转页面 ************************************/
+    @GetMapping("/detail/{id}")
+    @ResponseBody
+    public Object detail(@PathVariable("id") Long id){
+        return  operatorService.detail(id);
+    }
+
+    @GetMapping("/delete/{id}")
+    @ResponseBody
+    public Object delete(@PathVariable("id") Long id){
+        return  operatorService.deleteById(id);
+    }
+
+
+
+    /************************* 页面渲染 ************************************/
 
     @GetMapping("/tol")
     public String index(){

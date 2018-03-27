@@ -19,7 +19,7 @@
     <div class="layui-header">
         <div class="ht-console">
             <div class="ht-user">
-                <img src="../images/Logo_40.png" />
+                <img src="/static/img/Logo_40.png" />
                 <a class="ht-user-name">markgbug</a>
             </div>
         </div>
@@ -43,12 +43,29 @@
                 <li class="layui-nav-item layui-this">
                     <a href="javascript:;"><i class="fa fa-home"></i>首页</a>
                 </li>
-                <li class="layui-nav-item">
+                <#list menu as item>
+                    <#if item??>
+                        <li class="layui-nav-item">
+                            <a href="javascript:;"><i class="fa fa-info-circle"></i>${item.menuName}</a>
+                            <#if item.menuDOList??>
+                                <#list item.menuDOList as child>
+                                    <#if child??>
+                                        <dl class="layui-nav-child">
+                                            <dd><a href="javascript:;" data-url="${child.menuUrl}" data-id="item.id">${child.menuName}</a></dd>
+                                        </dl>
+                                    </#if>
+                                </#list>
+                            </#if>
+
+                        </li>
+                    </#if>
+                </#list>
+                <#--<li class="layui-nav-item">
                     <a href="javascript:;"><i class="fa fa-info-circle"></i>其他</a>
                     <dl class="layui-nav-child">
                         <dd><a href="javascript:;" data-url="/backer/menu" data-id="10086110">菜单管理</a></dd>
                     </dl>
-                </li>
+                </li>-->
             </ul>
         </div>
     </div>

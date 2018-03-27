@@ -26,7 +26,7 @@ public class ArticleDO {
     /**
      * 文章类别
      */
-    @Column(nullable = false,columnDefinition = "VARCHAR(100) COMMENT '文章类别'")
+    @Column(nullable = false,columnDefinition = "TINYINT(1) COMMENT '文章类别'")
     private Integer articleType;
 
     /**

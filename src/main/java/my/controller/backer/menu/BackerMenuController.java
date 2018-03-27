@@ -1,8 +1,10 @@
 package my.controller.backer.menu;
 
+import my.common.BaseJson;
 import my.controller.backer.menu.param.MenuParam;
 import my.dataobject.MenuDO;
 import my.service.menu.MenuService;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -49,10 +51,16 @@ public class BackerMenuController {
         return menuService.detail(id);
     }
 
-    /************************* 跳转页面 ************************************/
+    /************************* 页面渲染 ************************************/
 
     @GetMapping("")
-    public String list(Long id, Model model) {
+    public String list(MenuParam menuParam, Model model) {
+        BaseJson<Page<MenuDO>> baseJson = menuService.list(menuParam);
+        model.addAttribute("param",menuParam);
+        model.addAttribute("data",baseJson.getData().getContent());
+        model.addAttribute("total",baseJson.getData().getTotalElements());
+        model.addAttribute("pageNo",baseJson.getData().getTotalPages());
+        model.addAttribute("pageSize",baseJson.getData().getSize());
         return "/backer/menu/list";
     }
 }
