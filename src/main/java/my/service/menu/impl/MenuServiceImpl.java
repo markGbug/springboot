@@ -95,4 +95,5 @@ public class MenuServiceImpl implements MenuService {
     public List<MenuDO> findAll() {
         return menuRepository.findAll();
     }
+
 }

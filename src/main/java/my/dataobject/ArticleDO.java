@@ -4,6 +4,7 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -15,7 +16,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "t_article")
-public class ArticleDO {
+public class ArticleDO implements Serializable{
     /**
      * 文章ID
      */
