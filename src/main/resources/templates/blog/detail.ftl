@@ -1,6 +1,6 @@
 ﻿<#include "/widgets/blog/head.ftl">
 <!-- 本页样式表 -->
-<link href="/static/css/detail.css" rel="stylesheet" />
+<link href="/static/css/detail.css" rel="stylesheet"/>
 <script src="/static/js/detail.js"></script>
 <#include "/widgets/blog/menu.ftl">
     <!-- 主体（一般只改变这里的内容） -->
@@ -30,58 +30,61 @@
                             <p style="text-align:center;">
                                 <strong>
                                     <span style="font-size:18px;">
-                                        <br />
+                                        <br/>
                                     </span>
                                 </strong>
                             </p>
                             <p style="text-align:center;">
-                                <img src="http://www.lyblogs.cn/kindeditor/attached/image/20170318/20170318175743_4625.gif" width="100%" height="auto" title="pagesize演示" alt="pagesize演示" />
+                                <img src="http://www.lyblogs.cn/kindeditor/attached/image/20170318/20170318175743_4625.gif"
+                                     width="100%" height="auto" title="pagesize演示" alt="pagesize演示"/>
                             </p>
                             <p style="text-align:left;">
-                                <br />
+                                <br/>
                             </p>
-                            <hr />
+                            <hr/>
                             <p>
-                                <br />
+                                <br/>
                             </p>
                             <div style="text-align:center;">
                                 &nbsp; &nbsp; <span style="color:#EE33EE;">前言</span>：如果你没使用过layui框架或是laypage模块，那么请忽略这篇文章！
                             </div>
-                            <hr />
+                            <hr/>
                             <p>
-                                <br />
+                                <br/>
                             </p>
                             <p>
                                 &nbsp;&nbsp;&nbsp;&nbsp;pagesize.js是博主写的一个基于laypage的layui扩展模块。扩展了laypage目前未有的一个页容量控制功能！
                             </p>
                             <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;由于目前layui的分页laypage模块并没有控制页容量的功能（layui 2.0不知道会不会有），所以我针对我自己的后台管理系统制作了这样一个功能！
+                                &nbsp;&nbsp;&nbsp;&nbsp;由于目前layui的分页laypage模块并没有控制页容量的功能（layui
+                                2.0不知道会不会有），所以我针对我自己的后台管理系统制作了这样一个功能！
                             </p>
                             <p>
                                 &nbsp; &nbsp; 起初想着自己用，就简简单单的写了个方法，后来想着layui2.0发布日期还不知道，不如把这个方法做成模块分享！
                             </p>
                             <p>
-                                &nbsp; &nbsp; pageszie.js采用layui定义模块的方法定义，所以你可以以layui加载其他模块的方式加载它，<span style="color:#EE33EE;">前提</span>是你把pagesize.js放在/layui/lay/modules/目录下面。
+                                &nbsp; &nbsp; pageszie.js采用layui定义模块的方法定义，所以你可以以layui加载其他模块的方式加载它，<span
+                                    style="color:#EE33EE;">前提</span>是你把pagesize.js放在/layui/lay/modules/目录下面。
                             </p>
                             <p>
-                                <br />
+                                <br/>
                             </p>
                             <p>
                                 &nbsp; &nbsp; 加载方法如下：
                             </p>
-<pre class="prettyprint linenums lang-js">layui.use('pagesize',function(){
+                            <pre class="prettyprint linenums lang-js">layui.use('pagesize',function(){
     var pagesize = layui.pagesize();
 });</pre>
                             <p>
                                 &nbsp;&nbsp; &nbsp; 它主要提供两个功能，一个是原有的laypage上渲染一段控制页容量的html代码，另一个是点击确定的时候返回所确定的新的页容量。
                             </p>
                             <p>
-                                <br />
+                                <br/>
                             </p>
                             <p>
                                 &nbsp; &nbsp; 使用方法如下：
                             </p>
-<pre class="prettyprint linenums lang-js">//注意，这个方法须在laypage(seetiongs)方法执行之后，也就是laypage渲染之后！否则可能会出现意外
+                            <pre class="prettyprint linenums lang-js">//注意，这个方法须在laypage(seetiongs)方法执行之后，也就是laypage渲染之后！否则可能会出现意外
 pagesize(laypageId, pageSize).callback(function (newPageSize) {
     //这个回调函数是在指定新的页容量后触发
     //并返回新的页容量
@@ -95,31 +98,38 @@ pagesize(laypageId, pageSize).callback(function (newPageSize) {
                                 &nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="color:#337FE5;">pageSize</span></strong>：当前页容量，用于将当前页容量显示在界面上！
                             </p>
                             <p>
-                                <br />
+                                <br/>
                             </p>
                             <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;该功能是我后台分页的时候扩展的一个功能，但我又想将它分享出来，于是做成了layui扩展模块。<br />
-                                &nbsp;&nbsp;&nbsp;&nbsp;由于它起初针对我个人后台的分页定制的扩展功能，所以我只测试了我分页的写法是能实现的，并不知道大家的分页写法是否能用！<br />
-                                &nbsp;&nbsp;&nbsp;&nbsp;如不能用，请参考我后台的分页写法！<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;该功能是我后台分页的时候扩展的一个功能，但我又想将它分享出来，于是做成了layui扩展模块。<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;由于它起初针对我个人后台的分页定制的扩展功能，所以我只测试了我分页的写法是能实现的，并不知道大家的分页写法是否能用！<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;如不能用，请参考我后台的分页写法！<br/>
                                 &nbsp;&nbsp;&nbsp;&nbsp;后台暂时没有源码，没时间整理，所以请自行到后台查看！
                             </p>
-                            <hr />
+                            <hr/>
                             <p>
-                                <br />
+                                <br/>
                             </p>
                             <p>
-                                &nbsp; &nbsp; 点赞不落阁：<a href="http://fly.layui.com/case/2017/" target="_blank"><span style="color:#337FE5;">点击前往</span></a>&nbsp; &nbsp; 完整演示请看后台：<span><a href="http://www.lyblogs.cn/admin" target="_blank"><span style="color:#337FE5;">点击前往</span></a></span>&nbsp; &nbsp; pagesize.js下载地址：<a href="https://pan.baidu.com/s/1kVK8UhT" target="_blank"><span style="color:#337FE5;">点击前往</span></a>
+                                &nbsp; &nbsp; 点赞不落阁：<a href="http://fly.layui.com/case/2017/" target="_blank"><span
+                                    style="color:#337FE5;">点击前往</span></a>&nbsp; &nbsp; 完整演示请看后台：<span><a
+                                    href="http://www.lyblogs.cn/admin" target="_blank"><span
+                                    style="color:#337FE5;">点击前往</span></a></span>&nbsp; &nbsp; pagesize.js下载地址：<a
+                                    href="https://pan.baidu.com/s/1kVK8UhT" target="_blank"><span
+                                    style="color:#337FE5;">点击前往</span></a>
                             </p>
-                            <hr />
+                            <hr/>
                             &nbsp; &nbsp; 出自：不落阁
                             <p>
                                 &nbsp; &nbsp; 地址：<a href="http://www.lyblogs.cn" target="_blank">www.lyblogs.cn</a>
                             </p>
                             <p>
-                                &nbsp; &nbsp; 转载请注明出处！<img src="http://www.lyblogs.cn/kindeditor/plugins/emoticons/images/0.gif" border="0" alt="" />
+                                &nbsp; &nbsp; 转载请注明出处！<img
+                                    src="http://www.lyblogs.cn/kindeditor/plugins/emoticons/images/0.gif" border="0"
+                                    alt=""/>
                             </p>
                             <p>
-                                <br />
+                                <br/>
                             </p>
                         </div>
                     </div>
@@ -130,10 +140,12 @@ pagesize(laypageId, pageSize).callback(function (newPageSize) {
                             <div class="layui-field-box">
                                 <form class="layui-form blog-editor" action="">
                                     <div class="layui-form-item">
-                                        <textarea name="editorContent" lay-verify="content" id="remarkEditor" placeholder="请输入内容" class="layui-textarea layui-hide"></textarea>
+                                        <textarea name="editorContent" lay-verify="content" id="remarkEditor"
+                                                  placeholder="请输入内容" class="layui-textarea layui-hide"></textarea>
                                     </div>
                                     <div class="layui-form-item">
-                                        <button class="layui-btn" lay-submit="formRemark" lay-filter="formRemark">提交评论</button>
+                                        <button class="layui-btn" lay-submit="formRemark" lay-filter="formRemark">提交评论
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -142,7 +154,7 @@ pagesize(laypageId, pageSize).callback(function (newPageSize) {
                         <ul class="blog-comment">
                             <li>
                                 <div class="comment-parent">
-                                    <img src="../images/Absolutely.jpg" alt="absolutely" />
+                                    <img src="../images/Absolutely.jpg" alt="absolutely"/>
                                     <div class="info">
                                         <span class="username">Absolutely</span>
                                         <span class="time">2017-03-18 18:46:06</span>
@@ -157,7 +169,8 @@ pagesize(laypageId, pageSize).callback(function (newPageSize) {
                 </div>
                 <div class="blog-main-right">
                     <!--右边悬浮 平板或手机设备显示-->
-                    <div class="category-toggle"><i class="fa fa-chevron-left"></i></div><!--这个div位置不能改，否则需要添加一个div来代替它或者修改样式表-->
+                    <div class="category-toggle"><i class="fa fa-chevron-left"></i></div>
+                    <!--这个div位置不能改，否则需要添加一个div来代替它或者修改样式表-->
                     <div class="article-category shadow">
                         <div class="article-category-title">分类导航</div>
                         <!-- 点击分类后的页面和artile.html页面一样，只是数据是某一类别的 -->
@@ -172,19 +185,25 @@ pagesize(laypageId, pageSize).callback(function (newPageSize) {
                     <div class="blog-module shadow">
                         <div class="blog-module-title">相似文章</div>
                         <ul class="fa-ul blog-module-ul">
-                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a></li>
-                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a></li>
-                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a>
+                            </li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a>
+                            </li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="blog-module shadow">
                         <div class="blog-module-title">随便看看</div>
                         <ul class="fa-ul blog-module-ul">
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">一步步制作时光轴（一）（HTML篇）</a></li>
-                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">ASP.NET MVC制作404跳转（非302和200）</a></li>
-                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">ASP.NET MVC 防范跨站请求伪造（CSRF）</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">ASP.NET
+                                MVC制作404跳转（非302和200）</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">ASP.NET MVC
+                                防范跨站请求伪造（CSRF）</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">一步步制作时光轴（三）（JS篇）</a></li>
-                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a>
+                            </li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">一步步制作时光轴（二）（CSS篇）</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">写了个Win10风格快捷菜单！</a></li>
                         </ul>
@@ -196,7 +215,8 @@ pagesize(laypageId, pageSize).callback(function (newPageSize) {
     </div>
     <!-- 底部 -->
     <footer class="blog-footer">
-        <p><span>Copyright</span><span>&copy;</span><span>2017</span><a href="http://www.lyblogs.cn">不落阁</a><span>Design By LY</span></p>
+        <p><span>Copyright</span><span>&copy;</span><span>2017</span><a href="http://www.lyblogs.cn">不落阁</a><span>Design By LY</span>
+        </p>
         <p><a href="http://www.miibeian.gov.cn/" target="_blank">蜀ICP备16029915号-1</a></p>
     </footer>
     <!--侧边导航-->

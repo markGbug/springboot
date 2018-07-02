@@ -41,7 +41,7 @@ public class InitComponent {
     /**
      * 操作人员数据
      */
-    public static final Map<String,OperatorDO> OPERATOR_MAP = new HashMap<>();
+    public static final Map<String, OperatorDO> OPERATOR_MAP = new HashMap<>();
 
     private static final Logger LOGGER = LoggerFactory.getLogger(InitComponent.class);
 
@@ -75,7 +75,7 @@ public class InitComponent {
      */
     private void operatorInit() {
         List<OperatorDO> list = operatorService.findAll();
-        list.forEach(operatorDO -> OPERATOR_MAP.put(operatorDO.getLoginId(),operatorDO));
+        list.forEach(operatorDO -> OPERATOR_MAP.put(operatorDO.getLoginId(), operatorDO));
     }
 
     /**

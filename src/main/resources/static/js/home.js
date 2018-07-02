@@ -4,6 +4,7 @@
         //播放公告
         playAnnouncement(3000);
     });
+
     function playAnnouncement(interval) {
         var index = 0;
         var $announcement = $('.home-tips-container>span');
@@ -16,6 +17,7 @@
             $announcement.eq(index).stop(true, true).fadeIn().siblings('span').fadeOut();  //下标对应的图片显示，同辈元素隐藏
         }, interval);
     }
+
     //画canvas
     DrawCanvas();
 });
@@ -48,7 +50,7 @@ function DrawCanvas() {
         dotCount = 250;
         dotRadius = 100;
         dotDistance = 80;
-    } 
+    }
     //默认鼠标位置 canvas 中间
     var mousePosition = {
         x: 50 * canvas.width / 100,
@@ -147,6 +149,7 @@ function DrawCanvas() {
 
         requestAnimationFrame(animateDots);
     }
+
     //鼠标在canvas上移动
     $('canvas').on('mousemove', function (e) {
         mousePosition.x = e.pageX;

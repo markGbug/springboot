@@ -52,8 +52,8 @@ public class MenuServiceImpl implements MenuService {
                 Predicate[] predicates = new Predicate[list.size()];
                 return cb.and(list.toArray(predicates));
             }
-        }, new PageRequest(param.getPageNo()-1,param.getPageSize()));
-        baseJson.setSuccessResult("查询成功",list);
+        }, new PageRequest(param.getPageNo() - 1, param.getPageSize()));
+        baseJson.setSuccessResult("查询成功", list);
         return baseJson;
     }
 

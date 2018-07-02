@@ -19,9 +19,9 @@
     margin: 20px auto;
 }
 
-    .blogerinfo-figure img {
-        border-radius: 50px;
-    }
+.blogerinfo-figure img {
+    border-radius: 50px;
+}
 
 .blogerinfo-nickname {
     font-size: 32px;
@@ -45,9 +45,10 @@
     padding-top: 5px;
 }
 
-    .blogerinfo-contact > a {
-        padding: 0 10px;
-    }
+.blogerinfo-contact > a {
+    padding: 0 10px;
+}
+
 /*博主信息END*/
 
 /*友情链接*/
@@ -56,6 +57,7 @@
     vertical-align: middle;
     padding: 2px 5px;
 }
+
 /*友情链接END*/
 
 /*一路走来和后台记录*/
@@ -67,4 +69,5 @@
     text-indent: 1.3em;
     padding: 2px 0;
 }
+
 /*一路走来和后台记录END*/

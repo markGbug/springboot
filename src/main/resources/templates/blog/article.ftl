@@ -1,6 +1,6 @@
 ﻿<#include "/widgets/blog/head.ftl">
 <!-- 本页样式表 -->
-<link href="/static/css/article.css" rel="stylesheet" />
+<link href="/static/css/article.css" rel="stylesheet"/>
 <#include "/widgets/blog/menu.ftl">
     <!-- 主体（一般只改变这里的内容） -->
     <div class="blog-body">
@@ -11,12 +11,13 @@
             </blockquote>
             <div class="blog-main">
                 <div class="blog-main-left">
-                    <div class="shadow" style="text-align:center;font-size:16px;padding:40px 15px;background:#fff;margin-bottom:15px;">
+                    <div class="shadow"
+                         style="text-align:center;font-size:16px;padding:40px 15px;background:#fff;margin-bottom:15px;">
                         未搜索到与【<span style="color: #FF5722;">keywords</span>】有关的文章，随便看看吧！
                     </div>
                     <div class="article shadow">
                         <div class="article-left">
-                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pages.js）！" />
+                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pages.js）！"/>
                         </div>
                         <div class="article-right">
                             <div class="article-title">
@@ -37,7 +38,7 @@
                     </div>
                     <div class="article shadow">
                         <div class="article-left">
-                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pages.js）！" />
+                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pages.js）！"/>
                         </div>
                         <div class="article-right">
                             <div class="article-title">
@@ -58,7 +59,7 @@
                     </div>
                     <div class="article shadow">
                         <div class="article-left">
-                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pages.js）！" />
+                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pages.js）！"/>
                         </div>
                         <div class="article-right">
                             <div class="article-title">
@@ -79,7 +80,7 @@
                     </div>
                     <div class="article shadow">
                         <div class="article-left">
-                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pages.js）！" />
+                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pages.js）！"/>
                         </div>
                         <div class="article-right">
                             <div class="article-title">
@@ -100,7 +101,7 @@
                     </div>
                     <div class="article shadow">
                         <div class="article-left">
-                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pages.js）！" />
+                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pages.js）！"/>
                         </div>
                         <div class="article-right">
                             <div class="article-title">
@@ -121,7 +122,7 @@
                     </div>
                     <div class="article shadow">
                         <div class="article-left">
-                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pages.js）！" />
+                            <img src="../images/cover/201703181909057125.jpg" alt="基于laypage的layui扩展模块（pages.js）！"/>
                         </div>
                         <div class="article-right">
                             <div class="article-title">
@@ -146,10 +147,12 @@
                         <form class="layui-form" action="">
                             <div class="layui-form-item">
                                 <div class="search-keywords  shadow">
-                                    <input type="text" name="keywords" lay-verify="required" placeholder="输入关键词搜索" autocomplete="off" class="layui-input">
+                                    <input type="text" name="keywords" lay-verify="required" placeholder="输入关键词搜索"
+                                           autocomplete="off" class="layui-input">
                                 </div>
                                 <div class="search-submit  shadow">
-                                    <a class="search-btn" lay-submit="formSearch" lay-filter="formSearch"><i class="fa fa-search"></i></a>
+                                    <a class="search-btn" lay-submit="formSearch" lay-filter="formSearch"><i
+                                            class="fa fa-search"></i></a>
                                 </div>
                             </div>
                         </form>
@@ -168,25 +171,31 @@
                         <div class="blog-module-title">作者推荐</div>
                         <ul class="fa-ul blog-module-ul">
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">Web安全之跨站请求伪造CSRF</a></li>
-                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">ASP.NET MVC 防范跨站请求伪造（CSRF）</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">ASP.NET MVC
+                                防范跨站请求伪造（CSRF）</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">C#基础知识回顾-扩展方法</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">一步步制作时光轴（一）（HTML篇）</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">一步步制作时光轴（二）（CSS篇）</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">一步步制作时光轴（三）（JS篇）</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">写了个Win10风格快捷菜单！</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">ASP.NET MVC自定义错误页</a></li>
-                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">ASP.NET MVC制作404跳转（非302和200）</a></li>
-                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">ASP.NET
+                                MVC制作404跳转（非302和200）</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="blog-module shadow">
                         <div class="blog-module-title">随便看看</div>
                         <ul class="fa-ul blog-module-ul">
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">一步步制作时光轴（一）（HTML篇）</a></li>
-                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">ASP.NET MVC制作404跳转（非302和200）</a></li>
-                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">ASP.NET MVC 防范跨站请求伪造（CSRF）</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">ASP.NET
+                                MVC制作404跳转（非302和200）</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">ASP.NET MVC
+                                防范跨站请求伪造（CSRF）</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">一步步制作时光轴（三）（JS篇）</a></li>
-                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">基于laypage的layui扩展模块（pages.js）！</a>
+                            </li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">一步步制作时光轴（二）（CSS篇）</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">写了个Win10风格快捷菜单！</a></li>
                             <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.ftl">常用正则表达式</a></li>
@@ -201,7 +210,8 @@
     </div>
     <!-- 底部 -->
     <footer class="blog-footer">
-        <p><span>Copyright</span><span>&copy;</span><span>2017</span><a href="http://www.lyblogs.cn">不落阁</a><span>Design By LY</span></p>
+        <p><span>Copyright</span><span>&copy;</span><span>2017</span><a href="http://www.lyblogs.cn">不落阁</a><span>Design By LY</span>
+        </p>
         <p><a href="http://www.miibeian.gov.cn/" target="_blank">蜀ICP备16029915号-1</a></p>
     </footer>
     <!--侧边导航-->

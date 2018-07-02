@@ -40,7 +40,7 @@ public class BizInterceptor implements HandlerInterceptor {
             }
         }
         String loginId = SDCUtils.decrypt(cookieManager.getCookieValue(cookieInfo.getLoginId()), BackerLoginController.class);
-        if (StringUtils.isBlank(loginId)||!InitComponent.OPERATOR_MAP.containsKey(loginId)) {
+        if (StringUtils.isBlank(loginId) || !InitComponent.OPERATOR_MAP.containsKey(loginId)) {
             response.sendRedirect("/backer/tol");
             return false;
         }
@@ -49,8 +49,8 @@ public class BizInterceptor implements HandlerInterceptor {
 
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-        if (modelAndView != null){
-            modelAndView.addObject("menu",InitComponent.NEST_MENU_LIST);
+        if (modelAndView != null) {
+            modelAndView.addObject("menu", InitComponent.NEST_MENU_LIST);
         }
     }
 

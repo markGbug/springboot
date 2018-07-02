@@ -45,7 +45,7 @@ public class LogComponent {
                 .append(request.getRequestURI())
                 .append("\n")
                 .append("method=")
-                .append(joinPoint.getSignature().getDeclaringTypeName()+"."+joinPoint.getSignature().getName())
+                .append(joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName())
                 .append("\n")
                 .append("param=")
                 .append(joinPoint.getArgs());
@@ -53,8 +53,8 @@ public class LogComponent {
     }
 
 
-    @AfterReturning(value = "logPointCut()",returning = "object")
-    public void afterReturning(Object object){
-        LOGGER.info("result={}",object.toString());
+    @AfterReturning(value = "logPointCut()", returning = "object")
+    public void afterReturning(Object object) {
+        LOGGER.info("result={}", object.toString());
     }
 }

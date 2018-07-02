@@ -26,11 +26,11 @@ layui.define(['element', 'layer', 'form'], function (exports) {
                 return "账号只能为英文或数字";
             }
         },
-       /* result_response: function (value) {
-            if (value.length < 1) {
-                return '请点击人机识别验证';
-            }
-        },*/
+        /* result_response: function (value) {
+             if (value.length < 1) {
+                 return '请点击人机识别验证';
+             }
+         },*/
     });
     //监听登陆提交
     form.on('submit(login)', function (data) {
@@ -43,8 +43,8 @@ layui.define(['element', 'layer', 'form'], function (exports) {
             url: '/backer/login',
             dataType: 'json',
             data: {
-                loginId : data.field.loginId,
-                password : data.field.password
+                loginId: data.field.loginId,
+                password: data.field.password
             },
             success: function (res) {
                 if (res.ifSuccess) {
@@ -72,7 +72,7 @@ layui.define(['element', 'layer', 'form'], function (exports) {
         loginHtml += '<div class="layui-form-item">';
         loginHtml += '<label class="layui-form-label">账号</label>';
         loginHtml += '<div class="layui-input-inline pm-login-input">';
-        loginHtml += '<input type="text" name="loginId" lay-verify="loginId" placeholder="请输入账号" value="lyblogscn" autocomplete="off" class="layui-input">';
+        loginHtml += '<input type="text" name="loginId" lay-verify="loginId" placeholder="请输入账号" value="zhangbj" autocomplete="off" class="layui-input">';
         loginHtml += '</div>';
         loginHtml += '</div>';
         loginHtml += '<div class="layui-form-item">';

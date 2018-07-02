@@ -1,5 +1,3 @@
-
-
 layui.define(['jquery', 'layer'], function (exports) {
     var $ = layui.jquery;
     var layer = layui.layer;

@@ -20,7 +20,7 @@ public class ArticleTypeDO {
     /**
      * 类型名称
      */
-    @Column(nullable = false,columnDefinition = "VARCHAR(40) COMMENT '类型名称'")
+    @Column(nullable = false, columnDefinition = "VARCHAR(40) COMMENT '类型名称'")
     private String typeName;
 
     public Integer getTypeId() {

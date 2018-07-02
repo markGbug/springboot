@@ -2,10 +2,10 @@
 
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>数据列表页面</title>
     <!-- layui.css -->
-    <link href="../plugin/layui/css/layui.css" rel="stylesheet" />
+    <link href="../plugin/layui/css/layui.css" rel="stylesheet"/>
     <style>
         .layui-btn-small {
             padding: 0 15px;
@@ -23,6 +23,7 @@
         #dataConsole {
             text-align: center;
         }
+
         /*分页页容量样式*/
         /*可选*/
         .layui-laypage {
@@ -33,10 +34,12 @@
         .layui-laypage > * {
             float: left;
         }
+
         /*可选*/
         .layui-laypage .laypage-extend-pagesize {
             float: right;
         }
+
         /*可选*/
         .layui-laypage:after {
             content: ".";
@@ -54,11 +57,12 @@
             border: none;
             font-weight: 400;
         }
+
         /*分页页容量样式END*/
     </style>
 </head>
 <body>
-<fieldset id="dataConsole" class="layui-elem-field layui-field-title"  style="display:none;">
+<fieldset id="dataConsole" class="layui-elem-field layui-field-title" style="display:none;">
     <legend>控制台</legend>
     <div class="layui-field-box">
         <div id="articleIndexTop">
@@ -139,10 +143,12 @@
                         </form>
                     </td>
                     <td>
-                        <button class="layui-btn layui-btn-small layui-btn-normal"><i class="layui-icon">&#xe642;</i></button>
+                        <button class="layui-btn layui-btn-small layui-btn-normal"><i class="layui-icon">&#xe642;</i>
+                        </button>
                     </td>
                     <td>
-                        <button class="layui-btn layui-btn-small layui-btn-danger"><i class="layui-icon">&#xe640;</i></button>
+                        <button class="layui-btn layui-btn-small layui-btn-danger"><i class="layui-icon">&#xe640;</i>
+                        </button>
                     </td>
                 </tr>
                 </tbody>

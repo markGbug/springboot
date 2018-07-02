@@ -14,7 +14,7 @@ public class PageParam {
     private Integer pageSize;
 
     public Integer getPageNo() {
-        return pageNo==null?1:pageNo;
+        return pageNo == null ? 1 : pageNo;
     }
 
     public void setPageNo(Integer pageNo) {
@@ -22,7 +22,7 @@ public class PageParam {
     }
 
     public Integer getPageSize() {
-        return pageSize==null?10:pageSize;
+        return pageSize == null ? 10 : pageSize;
     }
 
     public void setPageSize(Integer pageSize) {

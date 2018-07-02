@@ -12,18 +12,20 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @Desc
  * @date 2018/1/25
  */
-public interface OperatorRepository extends JpaRepository<OperatorDO,Long> {
+public interface OperatorRepository extends JpaRepository<OperatorDO, Long> {
 
     /**
      * 登录
+     *
      * @param LoginId
      * @param password
      * @return
      */
-    OperatorDO findByLoginIdAndPassword(String LoginId,String password);
+    OperatorDO findByLoginIdAndPassword(String LoginId, String password);
 
     /**
      * 查询用户列表
+     *
      * @param operator
      * @param pageable
      * @return

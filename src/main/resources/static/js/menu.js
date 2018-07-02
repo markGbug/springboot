@@ -35,7 +35,7 @@ layui.define(['laypage', 'layer', 'form', 'pages', 'baseAjax'], function (export
                 '        <div class="layui-form-select">' +
                 '           <select name="parentId">' +
                 '                <option value="">我不是父菜单</option>' +
-                '           </select>'+
+                '           </select>' +
                 '        </div>' +
                 '    </div>' +
                 '    <div class="layui-form-item">' +
@@ -45,7 +45,7 @@ layui.define(['laypage', 'layer', 'form', 'pages', 'baseAjax'], function (export
                 '                <option value="">操作员</option>' +
                 '                <option value="2">管理员</option>' +
                 '                <option value="3">超级管理员</option>' +
-                '           </select>'+
+                '           </select>' +
                 '        </div>' +
                 '    </div>' +
                 '    <div class="layui-form-item">' +
@@ -74,5 +74,5 @@ layui.define(['laypage', 'layer', 'form', 'pages', 'baseAjax'], function (export
         })
     });
 //form.render('checkbox');  //重新渲染CheckBox，编辑和添加的时候
-    exports("menu",{});
+    exports("menu", {});
 });

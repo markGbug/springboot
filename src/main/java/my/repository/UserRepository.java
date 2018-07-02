@@ -16,22 +16,25 @@ public interface UserRepository extends JpaRepository<UserDO, Long> {
 
     /**
      * 登录并获取用户信息
+     *
      * @param loginId
      * @param password
      * @return
      */
-    UserDO findByLoginIdAndPassword(String loginId,String password);
+    UserDO findByLoginIdAndPassword(String loginId, String password);
 
     /**
      * 条件查询
+     *
      * @param userDO
      * @param pageable
      * @return
      */
-    Page<UserDO> findByLoginIdAndMobileAndUserNameIsLike(UserDO userDO,Pageable pageable);
+    Page<UserDO> findByLoginIdAndMobileAndUserNameIsLike(UserDO userDO, Pageable pageable);
 
     /**
      * 删除用户
+     *
      * @param id
      * @return
      */

@@ -23,7 +23,7 @@ import java.util.List;
  * @date 2018/1/29
  */
 @Service
-public class OperatorServiceImpl implements OperatorService{
+public class OperatorServiceImpl implements OperatorService {
 
     @Resource
     private OperatorRepository operatorRepository;
@@ -35,19 +35,19 @@ public class OperatorServiceImpl implements OperatorService{
     public BaseJson<OperatorDO> backerLogin(String loginId, String password) {
         BaseJson<OperatorDO> baseJson = new BaseJson<>();
         OperatorDO operatorDO = operatorRepository.findByLoginIdAndPassword(loginId, MD5Utils.encrypt(password));
-        if (operatorDO == null){
-            baseJson.setResult(BaseConstants.RespCode.ERROR,"用户名或密码错误");
+        if (operatorDO == null) {
+            baseJson.setResult(BaseConstants.RespCode.ERROR, "用户名或密码错误");
             return baseJson;
         }
-        baseJson.setSuccessResult("登录成功",operatorDO);
+        baseJson.setSuccessResult("登录成功", operatorDO);
         return baseJson;
     }
 
     @Override
     public BaseJson<Page<OperatorDO>> list(OperatorParam param) {
         BaseJson<Page<OperatorDO>> baseJson = new BaseJson<>();
-        Page<OperatorDO> page = operatorRepository.findByOperatorLike(param.getOperator() ,new PageRequest(param.getPageNo(),param.getPageSize()));
-        baseJson.setSuccessResult("查询成功",page);
+        Page<OperatorDO> page = operatorRepository.findByOperatorLike(param.getOperator(), new PageRequest(param.getPageNo(), param.getPageSize()));
+        baseJson.setSuccessResult("查询成功", page);
         return baseJson;
     }
 
@@ -60,11 +60,11 @@ public class OperatorServiceImpl implements OperatorService{
     public BaseJson<OperatorDO> saveOrUpdate(OperatorDO operatorDO) {
         BaseJson<OperatorDO> baseJson = new BaseJson<>();
         OperatorDO result = operatorRepository.save(operatorDO);
-        if (null == result){
-            baseJson.setFailResult(BaseConstants.RespCode.ERROR,"操作失败");
-            return  baseJson;
+        if (null == result) {
+            baseJson.setFailResult(BaseConstants.RespCode.ERROR, "操作失败");
+            return baseJson;
         }
-        baseJson.setSuccessResult("操作成功",result);
+        baseJson.setSuccessResult("操作成功", result);
         initComponent.operatorFlush();
         return baseJson;
     }
@@ -74,7 +74,7 @@ public class OperatorServiceImpl implements OperatorService{
         BaseJson baseJson = new BaseJson();
         operatorRepository.delete(id);
         initComponent.operatorFlush();
-        baseJson.setSuccessResult("删除成功",null);
+        baseJson.setSuccessResult("删除成功", null);
         return baseJson;
     }
 
@@ -82,11 +82,11 @@ public class OperatorServiceImpl implements OperatorService{
     public BaseJson<OperatorDO> detail(Long id) {
         BaseJson<OperatorDO> baseJson = new BaseJson<>();
         OperatorDO operatorDO = operatorRepository.findOne(id);
-        if (null == operatorDO){
-            baseJson.setFailResult(BaseConstants.RespCode.ERROR,"查询失败");
+        if (null == operatorDO) {
+            baseJson.setFailResult(BaseConstants.RespCode.ERROR, "查询失败");
             return baseJson;
         }
-        baseJson.setSuccessResult("查询成功",operatorDO);
+        baseJson.setSuccessResult("查询成功", operatorDO);
         return baseJson;
     }
 }

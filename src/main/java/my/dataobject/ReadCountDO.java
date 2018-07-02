@@ -23,7 +23,7 @@ public class ReadCountDO {
     /**
      * 业务ID
      */
-    @Column(nullable = false,unique = true,columnDefinition = "BIGINT(20) COMMENT '业务ID'")
+    @Column(nullable = false, unique = true, columnDefinition = "BIGINT(20) COMMENT '业务ID'")
     private Long bizId;
 
     /**

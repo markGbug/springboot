@@ -28,14 +28,14 @@ import java.util.List;
 @Aspect
 @Order(1)
 @Component
-public class ValidParamInterceptor{
+public class ValidParamInterceptor {
 
     @Pointcut(value = "execution(* my.controller..*(..))")
     public void validPointCut() {
     }
 
     @Around("validPointCut()")
-    public Object invoke(ProceedingJoinPoint joinPoint) throws Throwable{
+    public Object invoke(ProceedingJoinPoint joinPoint) throws Throwable {
         Object[] params = joinPoint.getArgs();
 
         //如果不存在参数，直接进行下一步
@@ -58,22 +58,22 @@ public class ValidParamInterceptor{
         //CASE 1 ：不存在BindingResult对象
         //CASE 2 ：BindingResult对象不存在错误
         //RETURN NEXT
-        if (null == result || !result.hasErrors()){
+        if (null == result || !result.hasErrors()) {
             return joinPoint.proceed();
         }
 
         //将错误信息装入BaseJson并返回
         List<ObjectError> errors = result.getAllErrors();
         String message = errors.get(0).getDefaultMessage();
-        MethodSignature signature  = (MethodSignature) joinPoint.getSignature();
-        if (isResponseBody(signature.getMethod())){
+        MethodSignature signature = (MethodSignature) joinPoint.getSignature();
+        if (isResponseBody(signature.getMethod())) {
             BaseJson baseJson = new BaseJson();
-            baseJson.setFailResult(BaseConstants.RespCode.ERROR,message);
+            baseJson.setFailResult(BaseConstants.RespCode.ERROR, message);
             return baseJson;
         }
 
-        if (model != null){
-            model.addAttribute("errMsg",message);
+        if (model != null) {
+            model.addAttribute("errMsg", message);
             return "error";
         }
         return null;

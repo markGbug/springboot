@@ -71,7 +71,8 @@
                     <div class="layui-inline">
                         <label class="layui-form-label">关键词</label>
                         <div class="layui-input-inline">
-                            <input type="text" value="${param.menuName!''}" name="menuName" autocomplete="off" class="layui-input">
+                            <input type="text" value="${param.menuName!''}" name="menuName" autocomplete="off"
+                                   class="layui-input">
                         </div>
                         <div class="layui-input-inline" style="width:auto">
                             <button class="layui-btn" lay-submit lay-filter="formSearch">搜索</button>
@@ -130,7 +131,8 @@
                         </form>
                     </td>
                     <td>
-                        <button id="edit" data-id="${item.id}" data-url="${item.menuUrl}" class="layui-btn layui-btn-small layui-btn-normal"><i class="layui-icon">&#xe642;</i>
+                        <button id="edit" data-id="${item.id}" data-url="${item.menuUrl}"
+                                class="layui-btn layui-btn-small layui-btn-normal"><i class="layui-icon">&#xe642;</i>
                         </button>
                     </td>
                     <td>
@@ -158,12 +160,12 @@
 <script src="/static/plugins/layui/layui.js"></script>
 <!-- layui规范化用法 -->
 <script type="text/javascript">
-   layui.config({
+    layui.config({
         base: '/static/js/'
     }).extend({
-       page: 'page',
-       baseAjax: 'baseAjax',
-   }).use('menu');
+        page: 'page',
+        baseAjax: 'baseAjax',
+    }).use('menu');
 </script>
 </body>
 </html>

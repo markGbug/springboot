@@ -1,6 +1,6 @@
 ﻿<#include "/widgets/blog/head.ftl">
 <!-- 本页样式表 -->
-<link href="/static/css/timeline.css" rel="stylesheet" />
+<link href="/static/css/timeline.css" rel="stylesheet"/>
 <#include "/widgets/blog/menu.ftl">
     <!-- 主体（一般只改变这里的内容） -->
     <div class="blog-body">
@@ -20,9 +20,11 @@
                         <h1><i class="fa fa-clock-o"></i>时光轴<span> —— 记录生活点点滴滴</span></h1>
                         <div class="timeline-line"></div>
                         <div class="timeline-year">
-                            <h2><a class="yearToggle" href="javascript:;">2017年</a><i class="fa fa-caret-down fa-fw"></i></h2>
+                            <h2><a class="yearToggle" href="javascript:;">2017年</a><i
+                                    class="fa fa-caret-down fa-fw"></i></h2>
                             <div class="timeline-month">
-                                <h3 class=" animated fadeInLeft"><a class="monthToggle" href="javascript:;">2月</a><i class="fa fa-caret-down fa-fw"></i></h3>
+                                <h3 class=" animated fadeInLeft"><a class="monthToggle" href="javascript:;">2月</a><i
+                                        class="fa fa-caret-down fa-fw"></i></h3>
                                 <ul>
                                     <li class=" ">
                                         <div class="h4  animated fadeInLeft">
@@ -51,7 +53,8 @@
                                 </ul>
                             </div>
                             <div class="timeline-month">
-                                <h3 class=" animated fadeInLeft"><a class="monthToggle" href="javascript:;">1月</a><i class="fa fa-caret-down fa-fw"></i></h3>
+                                <h3 class=" animated fadeInLeft"><a class="monthToggle" href="javascript:;">1月</a><i
+                                        class="fa fa-caret-down fa-fw"></i></h3>
                                 <ul>
                                     <li class=" ">
                                         <div class="h4  animated fadeInLeft">
@@ -81,9 +84,11 @@
                             </div>
                         </div>
                         <div class="timeline-year">
-                            <h2><a class="yearToggle" href="javascript:;">2016年</a><i class="fa fa-caret-down fa-fw"></i></h2>
+                            <h2><a class="yearToggle" href="javascript:;">2016年</a><i
+                                    class="fa fa-caret-down fa-fw"></i></h2>
                             <div class="timeline-month">
-                                <h3 class=" animated fadeInLeft"><a class="monthToggle" href="javascript:;">2月</a><i class="fa fa-caret-down fa-fw"></i></h3>
+                                <h3 class=" animated fadeInLeft"><a class="monthToggle" href="javascript:;">2月</a><i
+                                        class="fa fa-caret-down fa-fw"></i></h3>
                                 <ul>
                                     <li class=" ">
                                         <div class="h4  animated fadeInLeft">
@@ -112,7 +117,8 @@
                                 </ul>
                             </div>
                             <div class="timeline-month">
-                                <h3 class=" animated fadeInLeft"><a class="monthToggle" href="javascript:;">1月</a><i class="fa fa-caret-down fa-fw"></i></h3>
+                                <h3 class=" animated fadeInLeft"><a class="monthToggle" href="javascript:;">1月</a><i
+                                        class="fa fa-caret-down fa-fw"></i></h3>
                                 <ul>
                                     <li class=" ">
                                         <div class="h4  animated fadeInLeft">
@@ -141,7 +147,8 @@
                                 </ul>
                             </div>
                         </div>
-                        <h1 style="padding-top:4px;padding-bottom:2px;margin-top:40px;"><i class="fa fa-hourglass-end"></i>THE END</h1>
+                        <h1 style="padding-top:4px;padding-bottom:2px;margin-top:40px;"><i
+                                class="fa fa-hourglass-end"></i>THE END</h1>
                     </div>
                 </div>
             </div>
@@ -149,7 +156,8 @@
     </div>
     <!-- 底部 -->
     <footer class="blog-footer">
-        <p><span>Copyright</span><span>&copy;</span><span>2017</span><a href="http://www.lyblogs.cn">不落阁</a><span>Design By LY</span></p>
+        <p><span>Copyright</span><span>&copy;</span><span>2017</span><a href="http://www.lyblogs.cn">不落阁</a><span>Design By LY</span>
+        </p>
         <p><a href="http://www.miibeian.gov.cn/" target="_blank">蜀ICP备16029915号-1</a></p>
     </footer>
     <!--侧边导航-->

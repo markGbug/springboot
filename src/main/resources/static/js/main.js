@@ -50,13 +50,14 @@
             setTimeout(function () {
                 //模拟菜单加载
                 layer.close(index);
-                element.tabAdd('tab', {
-                    title: title,
-                    content: '<iframe src="' + url + '" style="width:100%;height:100%;border:none;outline:none;"></iframe>',
-                    id: id
-                });
-                //切换到指定索引的卡片
-                element.tabChange('tab', id);
+                layui.baseAjax.getAjax(url);
+                /* element.tabAdd('tab', {
+                     title: title,
+                     content: '<iframe src="' + url + '" style="width:100%;height:100%;border:none;outline:none;"></iframe>',
+                     id: id
+                 });
+                 //切换到指定索引的卡片
+                 element.tabChange('tab', id);*/
             }, 500);
         }
     });
@@ -81,13 +82,13 @@
             setTimeout(function () {
                 //模拟菜单加载
                 layer.close(index);
-                element.tabAdd('tab', {
+                /*element.tabAdd('tab', {
                     title: title,
                     content: '<iframe src="' + url + '" style="width:100%;height:100%;border:none;outline:none;"></iframe>',
                     id: id
                 });
                 //切换到指定索引的卡片
-                element.tabChange('tab', id);
+                element.tabChange('tab', id);*/
             }, 500);
         }
         $('div.short-menu').slideUp('fast');

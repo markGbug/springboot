@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
  * @Desc
  * @date 2018/2/5
  */
-public class CookieInterceptor implements HandlerInterceptor{
+public class CookieInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         return false;

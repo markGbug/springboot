@@ -70,6 +70,7 @@
         $('.blog-share').removeClass('layui-hide');
         $('.blog-share').addClass('layui-show');
     }
+
     //隐藏百度分享
     function shareOut() {
         $('.blog-share').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
@@ -79,6 +80,7 @@
         $('.blog-share').addClass('shareOut');
         $('.blog-share').removeClass('layui-show');
     }
+
     //显示侧边导航
     function leftIn() {
         $('.blog-mask').unbind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
@@ -94,6 +96,7 @@
         $('.blog-nav-left').removeClass('layui-hide');
         $('.blog-nav-left').addClass('layui-show');
     }
+
     //隐藏侧边导航
     function leftOut() {
         $('.blog-mask').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
@@ -111,6 +114,7 @@
         $('.blog-nav-left').addClass('leftOut');
         $('.blog-nav-left').removeClass('layui-show');
     }
+
     //显示类别导航
     function categroyIn() {
         $('.category-toggle').addClass('layui-hide');
@@ -120,6 +124,7 @@
         $('.article-category').addClass('categoryIn');
         $('.article-category').addClass('layui-show');
     }
+
     //隐藏类别导航
     function categoryOut() {
         $('.article-category').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {

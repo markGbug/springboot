@@ -27,7 +27,7 @@ public class MenuDO {
     /**
      * 菜单名称
      */
-    @Column(nullable = false,columnDefinition = "VARCHAR(40) COMMENT '菜单名称'")
+    @Column(nullable = false, columnDefinition = "VARCHAR(40) COMMENT '菜单名称'")
     private String menuName;
 
     /**
@@ -39,25 +39,25 @@ public class MenuDO {
     /**
      * 菜单链接
      */
-    @Column(nullable = false,columnDefinition = "VARCHAR(40) COMMENT '菜单链接'")
+    @Column(nullable = false, columnDefinition = "VARCHAR(40) COMMENT '菜单链接'")
     private String menuUrl;
 
     /**
      * 操作员
      */
-    @Column(nullable = false,columnDefinition = "VARCHAR(40) COMMENT '操作员'")
+    @Column(nullable = false, columnDefinition = "VARCHAR(40) COMMENT '操作员'")
     private String operator;
 
     /**
      * 等级
      */
-    @Column(nullable = false,columnDefinition = "TINYINT(2) COMMENT '等级'")
+    @Column(nullable = false, columnDefinition = "TINYINT(2) COMMENT '等级'")
     private Integer level;
 
     /**
      * 创建时间
      */
-    @Column(updatable = false,columnDefinition = "DATETIME COMMENT '创建时间'")
+    @Column(updatable = false, columnDefinition = "DATETIME COMMENT '创建时间'")
     @CreatedDate
     @Temporal(TemporalType.TIMESTAMP)
     private Date gmtCreated;

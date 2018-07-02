@@ -11,5 +11,5 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
  * @Desc
  * @date 2018/1/25
  */
-public interface ArticleRepository extends JpaRepository<ArticleDO,Long>,JpaSpecificationExecutor<ArticleDO> {
+public interface ArticleRepository extends JpaRepository<ArticleDO, Long>, JpaSpecificationExecutor<ArticleDO> {
 }

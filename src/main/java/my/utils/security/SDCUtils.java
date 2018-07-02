@@ -11,6 +11,7 @@ public class SDCUtils {
 
     /**
      * 加密（不可解）
+     *
      * @param data
      * @return
      */
@@ -28,11 +29,12 @@ public class SDCUtils {
 
     /**
      * 加密（可解）
+     *
      * @param data
      * @param clazz
      * @return
      */
-    private static String crypt(String data, Class clazz,boolean type) {
+    private static String crypt(String data, Class clazz, boolean type) {
         if (data == null || data.length() == 0 || clazz == null) {
             return null;
         }
@@ -44,30 +46,32 @@ public class SDCUtils {
             for (int i = 0; i <= data.length() / clazzName.length(); i++) {
                 clazzBuffer.append(clazzName).append(i);
             }
-            clazzName = buffer.substring(0,dataArray.length);
+            clazzName = buffer.substring(0, dataArray.length);
         }
         String[] clazzArray = stringToUnicode(clazzName);
-        return type?plus(dataArray,clazzArray):sub(dataArray,clazzArray);
+        return type ? plus(dataArray, clazzArray) : sub(dataArray, clazzArray);
     }
 
     /**
      * 加密
+     *
      * @param data
      * @param clazz
      * @return
      */
-    public static String encrypt(String data, Class clazz){
-        return crypt(data,clazz,true);
+    public static String encrypt(String data, Class clazz) {
+        return crypt(data, clazz, true);
     }
 
     /**
      * 解密
+     *
      * @param data
      * @param clazz
      * @return
      */
-    public static String decrypt(String data, Class clazz){
-        return crypt(data,clazz,false);
+    public static String decrypt(String data, Class clazz) {
+        return crypt(data, clazz, false);
     }
 
     /**
@@ -106,30 +110,32 @@ public class SDCUtils {
 
     /**
      * unicode相加
+     *
      * @param unicode
      * @param key
      * @return
      */
-    private static String plus(String[] unicode,String[] key){
+    private static String plus(String[] unicode, String[] key) {
         StringBuffer buffer = new StringBuffer();
-        for (int i = 0 ;i<unicode.length;i++){
-            int data = Integer.parseInt(unicode[i], 16)+Integer.parseInt(key[i], 16);
-            buffer.append((char)data);
+        for (int i = 0; i < unicode.length; i++) {
+            int data = Integer.parseInt(unicode[i], 16) + Integer.parseInt(key[i], 16);
+            buffer.append((char) data);
         }
         return buffer.toString();
     }
 
     /**
      * unicode相减
+     *
      * @param unicode
      * @param key
      * @return
      */
-    private static String sub(String[] unicode,String[] key){
+    private static String sub(String[] unicode, String[] key) {
         StringBuffer buffer = new StringBuffer();
-        for (int i = 0 ;i<unicode.length;i++){
-            int data = Integer.parseInt(unicode[i], 16)- Integer.parseInt(key[i], 16);
-            buffer.append((char)data);
+        for (int i = 0; i < unicode.length; i++) {
+            int data = Integer.parseInt(unicode[i], 16) - Integer.parseInt(key[i], 16);
+            buffer.append((char) data);
         }
         return buffer.toString();
     }

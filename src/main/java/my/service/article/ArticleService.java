@@ -16,6 +16,7 @@ public interface ArticleService {
 
     /**
      * 查询列表
+     *
      * @param param
      * @return
      */
@@ -23,6 +24,7 @@ public interface ArticleService {
 
     /**
      * 新增修改文章
+     *
      * @param articleDO
      * @return
      */
@@ -30,6 +32,7 @@ public interface ArticleService {
 
     /**
      * 删除文章
+     *
      * @param id
      * @return
      */
@@ -37,6 +40,7 @@ public interface ArticleService {
 
     /**
      * 文章详情
+     *
      * @param id
      * @return
      */
@@ -44,6 +48,7 @@ public interface ArticleService {
 
     /**
      * 统计文章数据
+     *
      * @return
      */
     public BaseJson<Integer> count();

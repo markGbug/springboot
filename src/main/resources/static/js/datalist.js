@@ -12,7 +12,7 @@ layui.use(['laypage', 'layer', 'form'], function () {
         $.ajax({
             type: 'post',
             url: '/api/admin/MakeTopOrNot',
-            data: { "": data.value },
+            data: {"": data.value},
             success: function (res) {
                 if (!res.Success) {
                     if (data.elem.checked) {
@@ -36,7 +36,7 @@ layui.use(['laypage', 'layer', 'form'], function () {
         $.ajax({
             type: 'post',
             url: '/api/admin/MakeRecommendOrNot',
-            data: { "": data.value },
+            data: {"": data.value},
             success: function (res) {
                 if (!res.Success) {
                     if (data.elem.checked) {
@@ -101,7 +101,7 @@ function initilArticle(currentIndex, pageSize) {
         type: 'post',
         url: '/api/admin/GetArticlesByPage',
         contentType: 'application/json',
-        data: JSON.stringify({ "currentIndex": currentIndex, "pageSize": pageSize }),
+        data: JSON.stringify({"currentIndex": currentIndex, "pageSize": pageSize}),
         datatype: 'json',
         success: function (res) {
             layer.close(index);
@@ -205,7 +205,7 @@ function deleteArticle(articleId) {
         $.ajax({
             type: 'post',
             url: '/api/admin/AbolishArticle',
-            data: { "": articleId },
+            data: {"": articleId},
             success: function (res) {
                 layer.close(index);
                 layer.msg(res.Message);

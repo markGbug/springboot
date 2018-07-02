@@ -9,7 +9,7 @@ import my.common.PageParam;
  * @Desc
  * @date 2018/2/7
  */
-public class MenuParam extends PageParam{
+public class MenuParam extends PageParam {
 
     private Long id;
 

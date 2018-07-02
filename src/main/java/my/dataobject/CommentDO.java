@@ -24,25 +24,25 @@ public class CommentDO {
     /**
      * 业务ID
      */
-    @Column(nullable = false,columnDefinition = "BIGINT(20) COMMENT '业务ID'")
+    @Column(nullable = false, columnDefinition = "BIGINT(20) COMMENT '业务ID'")
     private Long bizId;
 
     /**
      * IP地址
      */
-    @Column(nullable = false,columnDefinition = "VARCHAR(40) COMMENT '业务ID'")
+    @Column(nullable = false, columnDefinition = "VARCHAR(40) COMMENT '业务ID'")
     private String ipAddress;
 
     /**
      * 用户昵称
      */
-    @Column(nullable = false,columnDefinition = "VARCHAR(40) COMMENT '用户昵称'")
+    @Column(nullable = false, columnDefinition = "VARCHAR(40) COMMENT '用户昵称'")
     private String nickName;
 
     /**
      * 创建时间
      */
-    @Column(updatable = false,columnDefinition = "DATETIME COMMENT '创建时间'")
+    @Column(updatable = false, columnDefinition = "DATETIME COMMENT '创建时间'")
     @CreatedDate
     @Temporal(TemporalType.TIMESTAMP)
     private Date gmtCreated;

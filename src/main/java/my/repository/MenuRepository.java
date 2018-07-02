@@ -11,5 +11,5 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
  * @Desc
  * @date 2018/2/7
  */
-public interface MenuRepository extends JpaRepository<MenuDO,Long>,JpaSpecificationExecutor<MenuDO>{
+public interface MenuRepository extends JpaRepository<MenuDO, Long>, JpaSpecificationExecutor<MenuDO> {
 }

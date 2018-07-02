@@ -39,19 +39,19 @@ public class ArticleServiceImpl implements ArticleService {
             @Override
             public Predicate toPredicate(Root<ArticleDO> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
                 List<Predicate> list = new ArrayList<>();
-                if (StringUtils.isNotBlank(param.getArticleTitle())){
-                    list.add(cb.like(root.get("articleTitle").as(String.class),param.getArticleTitle()+"%"));
+                if (StringUtils.isNotBlank(param.getArticleTitle())) {
+                    list.add(cb.like(root.get("articleTitle").as(String.class), param.getArticleTitle() + "%"));
                 }
-                if (StringUtils.isNotBlank(param.getAuthor())){
-                    list.add(cb.like(root.get("author").as(String.class),param.getAuthor()+"%"));
+                if (StringUtils.isNotBlank(param.getAuthor())) {
+                    list.add(cb.like(root.get("author").as(String.class), param.getAuthor() + "%"));
                 }
-                if (null != param.getArticleType()){
-                    list.add(cb.equal(root.get("articleType"),param.getArticleType()));
+                if (null != param.getArticleType()) {
+                    list.add(cb.equal(root.get("articleType"), param.getArticleType()));
                 }
                 return cb.and(list.toArray(new Predicate[list.size()]));
             }
         }, new PageRequest(param.getPageNo() - 1, param.getPageSize()));
-        baseJson.setSuccessResult("查询成功",page);
+        baseJson.setSuccessResult("查询成功", page);
         return null;
     }
 

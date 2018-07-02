@@ -10,5 +10,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @Desc
  * @date 2018/1/26
  */
-public interface DailyRepository extends JpaRepository<DailyDO,Long> {
+public interface DailyRepository extends JpaRepository<DailyDO, Long> {
 }

@@ -56,11 +56,11 @@ public class BackerMenuController {
     @GetMapping("")
     public String list(MenuParam menuParam, Model model) {
         BaseJson<Page<MenuDO>> baseJson = menuService.list(menuParam);
-        model.addAttribute("param",menuParam);
-        model.addAttribute("data",baseJson.getData().getContent());
-        model.addAttribute("total",baseJson.getData().getTotalElements());
-        model.addAttribute("pageNo",baseJson.getData().getTotalPages());
-        model.addAttribute("pageSize",baseJson.getData().getSize());
+        model.addAttribute("param", menuParam);
+        model.addAttribute("data", baseJson.getData().getContent());
+        model.addAttribute("total", baseJson.getData().getTotalElements());
+        model.addAttribute("pageNo", baseJson.getData().getTotalPages());
+        model.addAttribute("pageSize", baseJson.getData().getSize());
         return "/backer/menu/list";
     }
 }

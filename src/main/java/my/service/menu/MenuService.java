@@ -17,6 +17,7 @@ import java.util.List;
 public interface MenuService {
     /**
      * 查询菜单列表
+     *
      * @param param
      * @return
      */
@@ -24,6 +25,7 @@ public interface MenuService {
 
     /**
      * 新增修改菜单
+     *
      * @param menuDO
      * @return
      */
@@ -31,6 +33,7 @@ public interface MenuService {
 
     /**
      * 删除菜单
+     *
      * @param id
      * @return
      */
@@ -38,6 +41,7 @@ public interface MenuService {
 
     /**
      * 菜单详情
+     *
      * @param id
      * @return
      */
@@ -45,6 +49,7 @@ public interface MenuService {
 
     /**
      * 获取所有菜单数据（不直接对外提供）
+     *
      * @return
      */
     List<MenuDO> findAll();

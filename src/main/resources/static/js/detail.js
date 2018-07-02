@@ -32,7 +32,7 @@ layui.use(['form', 'layedit'], function () {
                 height: 150,
                 tool: ['face', '|', 'left', 'center', 'right', '|', 'link'],
             });
-            layer.msg("评论成功", { icon: 1 });
+            layer.msg("评论成功", {icon: 1});
         }, 500);
         return false;
     });

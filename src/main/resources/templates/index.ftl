@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>首页</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 </head>
 <script type="text/javascript" src="../static/plugins/seajs/sea.js" id="seajsnode"></script>
 <script type="text/javascript" src="../static/js/canvas.js"></script>
@@ -13,8 +13,8 @@
 
 <a href="/c">跳转</a>
 <script type="text/javascript">
-        canvas = document.getElementById('canvas-banner');
-        DrawCanvas('canvas-banner');
+    canvas = document.getElementById('canvas-banner');
+    DrawCanvas('canvas-banner');
 </script>
 </body>
 </html>

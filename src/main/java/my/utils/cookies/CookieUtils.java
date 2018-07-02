@@ -10,7 +10,6 @@ import org.apache.commons.lang3.StringUtils;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.lang.reflect.Field;
 
 /**
@@ -107,7 +106,7 @@ public class CookieUtils {
 
     private static String keyEncrypt(String key) throws NullableException {
         if (key == null || key.length() == 0) {
-            throw new NullableException(BaseConstants.RespCode.EXCEPTION, "Cookie not avaibable");
+            throw new NullableException(BaseConstants.RespCode.EXCEPTION, "Cookie not available");
         }
         return SDCUtils.encrypt(key);
     }
@@ -124,15 +123,4 @@ public class CookieUtils {
         this.request = request;
         this.response = response;
     }
-
-    public static void main(String[] args) throws IOException {
-        String path = "/home/admin/logs/webx.log";
-        StringBuffer buffer = new StringBuffer();
-       /* try (BufferedReader reader = new BufferedReader(new FileReader(path))){
-            while ((s=reader.readLine())!=null){
-                buffer.append(s).append("\n");
-            }
-        }*/
-    }
-
 }

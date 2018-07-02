@@ -6,7 +6,7 @@ function DrawCanvas(id) {
 
     var screenWidth = screen.width;
     canvas.width = window.document.body.clientWidth;
-    canvas.height = window.innerHeight * 2/3;
+    canvas.height = window.innerHeight * 2 / 3;
 
     var dotCount = 20; //圆点数量
     var dotRadius = 70; //产生连线的范围
@@ -177,5 +177,5 @@ window.addEventListener("resize", resizeCanvas, false);
 function resizeCanvas() {
     var canvas = document.getElementById('canvas-banner');
     canvas.width = window.document.body.clientWidth;
-    canvas.height = window.innerHeight * 2/3;
+    canvas.height = window.innerHeight * 2 / 3;
 }

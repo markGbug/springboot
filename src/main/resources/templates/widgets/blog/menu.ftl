@@ -8,7 +8,7 @@
             <i class="fa fa-qq"></i>
         </a>
         <a href="javascript:;" class="blog-user layui-hide">
-            <img src="../images/Absolutely.jpg" alt="Absolutely" title="Absolutely" />
+            <img src="../images/Absolutely.jpg" alt="Absolutely" title="Absolutely"/>
         </a>
         <!-- SBWW -->
         <a class="blog-logo" href="/blog">SBWW</a>

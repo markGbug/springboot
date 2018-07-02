@@ -18,6 +18,7 @@ public interface OperatorService {
 
     /**
      * 登录校验
+     *
      * @param loginId
      * @param password
      */
@@ -25,6 +26,7 @@ public interface OperatorService {
 
     /**
      * 管理员列表
+     *
      * @param param
      * @return
      */
@@ -32,12 +34,14 @@ public interface OperatorService {
 
     /**
      * 所有管理员(不直接对外提供)
+     *
      * @return
      */
     List<OperatorDO> findAll();
 
     /**
      * 操作管理员
+     *
      * @param operatorDO
      * @return
      */
@@ -45,12 +49,14 @@ public interface OperatorService {
 
     /**
      * 删除
+     *
      * @param id
      */
     BaseJson deleteById(Long id);
 
     /**
      * 详情
+     *
      * @param id
      * @return
      */

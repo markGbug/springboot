@@ -10,5 +10,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @Desc
  * @date 2018/1/25
  */
-public interface CommentRepository extends JpaRepository<CommentDO,Long> {
+public interface CommentRepository extends JpaRepository<CommentDO, Long> {
 }

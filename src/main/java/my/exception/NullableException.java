@@ -37,4 +37,6 @@ public class NullableException extends Exception {
         this.code = code;
         this.message = message;
     }
+
+
 }

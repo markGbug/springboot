@@ -23,7 +23,7 @@ public class NoticeDO {
     /**
      * 通知内容
      */
-    @Column(nullable = false,columnDefinition = "VARCHAR(100) COMMENT '通知内容'")
+    @Column(nullable = false, columnDefinition = "VARCHAR(100) COMMENT '通知内容'")
     private String noticeContent;
 
     /**

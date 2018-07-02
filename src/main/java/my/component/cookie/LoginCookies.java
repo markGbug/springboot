@@ -15,6 +15,4 @@ import javax.servlet.http.HttpServletResponse;
 public class LoginCookies extends CookieUtils {
 
 
-
-
 }

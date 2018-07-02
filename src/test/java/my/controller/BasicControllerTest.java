@@ -22,7 +22,7 @@ public class BasicControllerTest {
     private MockMvc mvc;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         mvc = MockMvcBuilders.standaloneSetup(new BasicController()).build();
     }
 

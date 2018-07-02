@@ -11,5 +11,5 @@ import org.springframework.stereotype.Component;
  * @date 2018/2/5
  */
 @Component
-public class CookieManager extends CookieUtils{
+public class CookieManager extends CookieUtils {
 }

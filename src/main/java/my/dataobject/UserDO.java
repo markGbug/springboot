@@ -28,20 +28,20 @@ public class UserDO {
     /**
      * 用户昵称
      */
-    @Column(nullable = false,columnDefinition = "VARCHAR(40) COMMENT '用户昵称'")
+    @Column(nullable = false, columnDefinition = "VARCHAR(40) COMMENT '用户昵称'")
     private String userName;
 
     /**
      * 登录ID
      */
-    @Column(nullable = false,unique = true,columnDefinition = "VARCHAR(40) COMMENT '登录ID'")
+    @Column(nullable = false, unique = true, columnDefinition = "VARCHAR(40) COMMENT '登录ID'")
     @NotBlank(message = "登录名不能为空")
     private String loginId;
 
     /**
      * 密码
      */
-    @Column(nullable = false,columnDefinition = "VARCHAR(40) COMMENT '密码'")
+    @Column(nullable = false, columnDefinition = "VARCHAR(40) COMMENT '密码'")
     @NotBlank(message = "密码不能为空")
     private String password;
 
@@ -55,7 +55,7 @@ public class UserDO {
     /**
      * 身份证
      */
-    @Column(nullable = false,columnDefinition = "VARCHAR(100) COMMENT '身份证'")
+    @Column(nullable = false, columnDefinition = "VARCHAR(100) COMMENT '身份证'")
     private String idCard;
 
     /**
@@ -79,7 +79,7 @@ public class UserDO {
     /**
      * 创建时间
      */
-    @Column(updatable = false,columnDefinition = "DATETIME COMMENT '创建时间'")
+    @Column(updatable = false, columnDefinition = "DATETIME COMMENT '创建时间'")
     @CreatedDate
     @Temporal(TemporalType.TIMESTAMP)
     private Date gmtCreated;

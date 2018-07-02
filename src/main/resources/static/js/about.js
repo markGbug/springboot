@@ -43,7 +43,7 @@
                 height: 150,
                 tool: ['face', '|', 'left', 'center', 'right', '|', 'link'],
             });
-            layer.msg("留言成功", { icon: 1 });
+            layer.msg("留言成功", {icon: 1});
         }, 500);
         return false;
     });
@@ -58,11 +58,12 @@
             var html = '<div class="comment-child"><img src="../images/Absolutely.jpg"alt="Absolutely"/><div class="info"><span class="username">模拟回复</span><span>' + content + '</span></div><p class="info"><span class="time">2017-03-18 18:26</span></p></div>';
             $(data.form).find('textarea').val('');
             $(data.form).parent('.replycontainer').before(html).siblings('.comment-parent').children('p').children('a').click();
-            layer.msg("回复成功", { icon: 1 });
+            layer.msg("回复成功", {icon: 1});
         }, 500);
         return false;
     });
 });
+
 function btnReplyClick(elem) {
     var $ = layui.jquery;
     $(elem).parent('p').parent('.comment-parent').siblings('.replycontainer').toggleClass('layui-hide');
@@ -72,6 +73,7 @@ function btnReplyClick(elem) {
         $(elem).text('回复')
     }
 }
+
 systemTime();
 
 function systemTime() {

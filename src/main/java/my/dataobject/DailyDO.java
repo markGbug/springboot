@@ -26,7 +26,7 @@ public class DailyDO {
     /**
      * 创建时间
      */
-    @Column(updatable = false,columnDefinition = "DATETIME COMMENT '创建时间'")
+    @Column(updatable = false, columnDefinition = "DATETIME COMMENT '创建时间'")
     @CreatedDate
     @Temporal(TemporalType.TIMESTAMP)
     private Date gmtCreated;

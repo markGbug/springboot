@@ -16,7 +16,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "t_article")
-public class ArticleDO implements Serializable{
+public class ArticleDO implements Serializable {
     /**
      * 文章ID
      */
@@ -27,19 +27,19 @@ public class ArticleDO implements Serializable{
     /**
      * 文章类别
      */
-    @Column(nullable = false,columnDefinition = "TINYINT(1) COMMENT '文章类别'")
+    @Column(nullable = false, columnDefinition = "TINYINT(1) COMMENT '文章类别'")
     private Integer articleType;
 
     /**
      * 文章标题
      */
-    @Column(nullable = false,columnDefinition = "VARCHAR(100) COMMENT '文章标题'")
+    @Column(nullable = false, columnDefinition = "VARCHAR(100) COMMENT '文章标题'")
     private String articleTitle;
 
     /**
      * 文章内容
      */
-    @Column(nullable = false,columnDefinition = "VARCHAR(100) COMMENT '文章内容'")
+    @Column(nullable = false, columnDefinition = "VARCHAR(100) COMMENT '文章内容'")
     private String articleContent;
 
     /**
@@ -51,7 +51,7 @@ public class ArticleDO implements Serializable{
     /**
      * 创建时间
      */
-    @Column(updatable = false,columnDefinition = "DATETIME COMMENT '创建时间'")
+    @Column(updatable = false, columnDefinition = "DATETIME COMMENT '创建时间'")
     @CreatedDate
     @Temporal(TemporalType.TIMESTAMP)
     private Date gmtCreated;

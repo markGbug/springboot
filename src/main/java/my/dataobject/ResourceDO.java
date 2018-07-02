@@ -24,31 +24,31 @@ public class ResourceDO {
     /**
      * 资源名称
      */
-    @Column(nullable = false,columnDefinition = "VARCHAR(40) COMMENT '资源名称'")
+    @Column(nullable = false, columnDefinition = "VARCHAR(40) COMMENT '资源名称'")
     private String resourceName;
 
     /**
      * 资源简介
      */
-    @Column(nullable = false,columnDefinition = "VARCHAR(200) COMMENT '资源简介'")
+    @Column(nullable = false, columnDefinition = "VARCHAR(200) COMMENT '资源简介'")
     private String resourceDesc;
 
     /**
      * 上传作者
      */
-    @Column(nullable = false,columnDefinition = "VARCHAR(40) COMMENT '上传作者'")
+    @Column(nullable = false, columnDefinition = "VARCHAR(40) COMMENT '上传作者'")
     private String resourceOwner;
 
     /**
      * 资源类别
      */
-    @Column(nullable = false,columnDefinition = "TINYINT(2) COMMENT '资源类别'")
+    @Column(nullable = false, columnDefinition = "TINYINT(2) COMMENT '资源类别'")
     private Integer resourceType;
 
     /**
      * 创建时间
      */
-    @Column(updatable = false,columnDefinition = "DATETIME COMMENT '创建时间'")
+    @Column(updatable = false, columnDefinition = "DATETIME COMMENT '创建时间'")
     @CreatedDate
     @Temporal(TemporalType.TIMESTAMP)
     private Date gmtCreated;

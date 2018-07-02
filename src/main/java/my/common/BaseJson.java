@@ -31,21 +31,21 @@ public class BaseJson<T> {
     }
 
 
-    public void setResult(String code,String message,T data){
+    public void setResult(String code, String message, T data) {
         this.code = code;
         this.message = message;
         this.data = data;
         this.ifSuccess = BaseConstants.RespCode.SUCCESS.equals(code);
     }
 
-    public void setFailResult(String code,String message){
+    public void setFailResult(String code, String message) {
         this.code = code;
         this.message = message;
         this.data = data;
-        this.ifSuccess =false;
+        this.ifSuccess = false;
     }
 
-    public void setSuccessResult(String message,T data){
+    public void setSuccessResult(String message, T data) {
         this.code = BaseConstants.RespCode.SUCCESS;
         this.message = message;
         this.data = data;
@@ -53,7 +53,7 @@ public class BaseJson<T> {
     }
 
 
-    public void setResult(String code,String message){
+    public void setResult(String code, String message) {
         this.code = code;
         this.message = message;
         this.ifSuccess = BaseConstants.RespCode.SUCCESS.equals(code);

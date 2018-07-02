@@ -12,10 +12,10 @@ public class BaseConstants {
     /**
      * 响应参数
      */
-    public interface RespCode{
+    public interface RespCode {
         String SUCCESS = "0";
         String EXCEPTION = "1";
-        String ERROR =  "2";
+        String ERROR = "2";
     }
 
     /**

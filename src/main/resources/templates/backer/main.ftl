@@ -1,17 +1,17 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>SBWW MANAGER</title>
     <link rel="shortcut icon" href="/static/img/Logo_40.png" type="image/x-icon">
     <!-- layui.css -->
-    <link href="/static/plugins/layui/css/layui.css" rel="stylesheet" />
+    <link href="/static/plugins/layui/css/layui.css" rel="stylesheet"/>
     <!-- font-awesome.css -->
-    <link href="/static/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/static/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
     <!-- animate.css -->
-    <link href="/static/css/animate.min.css" rel="stylesheet" />
+    <link href="/static/css/animate.min.css" rel="stylesheet"/>
     <!-- 本页样式 -->
-    <link href="/static/css/main.css" rel="stylesheet" />
+    <link href="/static/css/main.css" rel="stylesheet"/>
 </head>
 <body>
 <div class="layui-layout layui-layout-admin">
@@ -19,7 +19,7 @@
     <div class="layui-header">
         <div class="ht-console">
             <div class="ht-user">
-                <img src="/static/img/Logo_40.png" />
+                <img src="/static/img/Logo_40.png"/>
                 <a class="ht-user-name">markgbug</a>
             </div>
         </div>
@@ -51,7 +51,8 @@
                                 <#list item.menuDOList as child>
                                     <#if child??>
                                         <dl class="layui-nav-child">
-                                            <dd><a href="javascript:;" data-url="${child.menuUrl}" data-id="item.id">${child.menuName}</a></dd>
+                                            <dd><a href="javascript:;" data-url="${child.menuUrl}"
+                                                   data-id="${item.id}">${child.menuName}</a></dd>
                                         </dl>
                                     </#if>
                                 </#list>
@@ -60,12 +61,12 @@
                         </li>
                     </#if>
                 </#list>
-                <#--<li class="layui-nav-item">
-                    <a href="javascript:;"><i class="fa fa-info-circle"></i>其他</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="javascript:;" data-url="/backer/menu" data-id="10086110">菜单管理</a></dd>
-                    </dl>
-                </li>-->
+            <#--<li class="layui-nav-item">
+                <a href="javascript:;"><i class="fa fa-info-circle"></i>其他</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;" data-url="/backer/menu" data-id="10086110">菜单管理</a></dd>
+                </dl>
+            </li>-->
             </ul>
         </div>
     </div>
@@ -75,7 +76,8 @@
     </div>
     <!--主体内容-->
     <div class="layui-body">
-        <div style="margin:0;position:absolute;top:4px;bottom:0px;width:100%;" class="layui-tab layui-tab-brief" lay-filter="tab" lay-allowclose="true">
+        <div style="margin:0;position:absolute;top:4px;bottom:0px;width:100%;" class="layui-tab layui-tab-brief"
+             lay-filter="tab" lay-allowclose="true">
             <ul class="layui-tab-title">
                 <li lay-id="0" class="layui-this">首页</li>
             </ul>
@@ -165,6 +167,14 @@
 <!-- layui.js -->
 <script src="/static/plugins/jquery/jquery-3.2.1.min.js"></script>
 <script src="/static/plugins/layui/layui.js"></script>
-<script type="text/javascript" src="/static/js/main.js"></script>
+<!-- layui规范化用法 -->
+<script type="text/javascript">
+    layui.config({
+        base: '/static/js/'
+    }).extend({
+        page: 'page',
+        baseAjax: 'baseAjax',
+    }).use('main');
+</script>
 </body>
 </html>
