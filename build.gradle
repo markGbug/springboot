@@ -10,10 +10,10 @@ buildscript {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.9.RELEASE")
     }
 }
-bootRun {
+/*bootRun {
     //开启页面热加载功能
     addResources = true
-}
+}*/
 
 apply plugin: 'java'
 apply plugin: 'spring-boot'
