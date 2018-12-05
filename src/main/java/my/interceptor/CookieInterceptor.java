@@ -28,4 +28,8 @@ public class CookieInterceptor implements HandlerInterceptor {
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
 
     }
+
+    public static void main(String[] args) {
+        System.out.println(1);
+    }
 }
